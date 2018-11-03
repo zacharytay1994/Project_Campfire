@@ -85,6 +85,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ActivitiesPage\ActivitiesPage.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -133,6 +134,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActivitiesPage\ActivitiesPage.aspx.cs">
+      <DependentUpon>ActivitiesPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ActivitiesPage\ActivitiesPage.aspx.designer.cs">
+      <DependentUpon>ActivitiesPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Campfire.Master.cs">
       <DependentUpon>Campfire.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
