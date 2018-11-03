@@ -33,5 +33,24 @@ namespace Campfire.Classes
 
             conn.Close();
         }
+
+        public bool CheckLoginData(string _email, string _password)
+        {
+            string strConn = ConfigurationManager.ConnectionStrings
+                    ["CampfireConnectionString"].ToString();
+
+            SqlConnection conn = new SqlConnection(strConn);
+
+            SqlCommand cmd = new SqlCommand("SELECT Password FROM CampfireUsers WHERE EmailAddr=@email", conn);
+            cmd.Parameters.AddWithValue("@email", _email);
+            conn.Open();
+            string pw = (string)cmd.ExecuteScalar();
+            conn.Close();
+
+            if (_password == pw)
+                return true;
+            else
+                return false;
+        }
     }
 }

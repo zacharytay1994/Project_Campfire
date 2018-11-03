@@ -70,6 +70,9 @@
         .auto-style17 {
             height: 33px;
         }
+        .auto-style18 {
+            color: #CC0000;
+        }
     </style>
 </head>
 <body>
@@ -99,7 +102,9 @@
             <tr>
                 <td class="auto-style9"></td>
                 <td class="auto-style10"></td>
-                <td class="auto-style11"></td>
+                <td class="auto-style11">
+                    <asp:Label ID="lblMessage" runat="server" CssClass="auto-style18"></asp:Label>
+                </td>
                 <td class="auto-style12"></td>
             </tr>
             <tr>
