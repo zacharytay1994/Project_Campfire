@@ -85,14 +85,16 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ActivityAdd.aspx" />
+    <Content Include="ActivityAddForm\ActivityAdd.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\styleForm.css" />
     <Content Include="HomePage.aspx" />
+    <Content Include="sampleActivity.html" />
     <Content Include="LogIn.aspx" />
     <Content Include="NavBar.ascx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -134,11 +136,11 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActivityAdd.aspx.cs">
+    <Compile Include="ActivityAddForm\ActivityAdd.aspx.cs">
       <DependentUpon>ActivityAdd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ActivityAdd.aspx.designer.cs">
+    <Compile Include="ActivityAddForm\ActivityAdd.aspx.designer.cs">
       <DependentUpon>ActivityAdd.aspx</DependentUpon>
     </Compile>
     <Compile Include="Campfire.Master.cs">
@@ -196,6 +198,9 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
