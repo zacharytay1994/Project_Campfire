@@ -52,5 +52,28 @@ namespace Campfire.Classes
             else
                 return false;
         }
+        public void AddActivity(string _activityname, string _activitydesc, string _activitycat, string _activityexp, string _activitylink)
+        {
+            string strConn = ConfigurationManager.ConnectionStrings
+                    ["CampfireConnectionString"].ToString();
+
+            SqlConnection conn = new SqlConnection(strConn);
+
+            SqlCommand cmd = new SqlCommand("INSERT INTO Activities " +
+                "(ActivityName, ActivityDesc, Category, ActivityExp, Link) VALUES (@activityname, @activitydesc," +
+                "@activitycat, @activityexp, @activitylink)", conn);
+
+            cmd.Parameters.AddWithValue("@activityname", _activityname);
+            cmd.Parameters.AddWithValue("@activitydesc", _activitydesc);
+            cmd.Parameters.AddWithValue("@activitycat", _activitycat);
+            cmd.Parameters.AddWithValue("@activityexp", _activityexp);
+            cmd.Parameters.AddWithValue("@activitylink", _activitylink);
+
+            conn.Open();
+
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+        }
     }
 }
