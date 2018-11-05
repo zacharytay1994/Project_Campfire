@@ -13,6 +13,8 @@
     <script src="~/Scripts/jquery-3.0.0.min.js"></script>
     <script src="~/Scripts/umd/popper.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="CSS/HomePage.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -22,7 +24,7 @@
         <div class="container" style="margin:auto;">   
             <div class="row">
                 <div class="col-sm-12">
-                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                    <asp:ContentPlaceHolder ID="body" runat="server"></asp:ContentPlaceHolder>
                 </div>
             </div>
         </div>
