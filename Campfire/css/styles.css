@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5, h6 {
 .border {
     border: solid;
     border-width: thin;
-    background-image: url("../images/petra.jpg");
+    background-image: url("../images/Ex30.png");
 }
 
 
@@ -34,40 +34,9 @@ p, div, li, button {
     color: white;
 }
 
-.wrapper {
-    max-width: 950px;
-    margin: 0 auto;
-    padding: 90px 30px;
-    overflow: auto;
-}
 
-footer {
-    font-size: 65%;
-    max-width: 30%;
-}
 
-a {
-    color: white;
-}
-
-    a:hover {
-        color: red;
-    }
-
-table {
-    font-family: 'Lato', Helvetica, Arial, sans-serif;
-    column-width: 200px;
-    border: solid;
-    text-align: left;
-    margin: auto;
-    color: white;
-}
-
-tr:nth-child(even) {
-    background-color: hotpink;
-}
-
-.button {
+.submitButton {
     display: inline-block;
     cursor: pointer;
     text-align: center;
@@ -80,27 +49,15 @@ tr:nth-child(even) {
     padding: 5px 10px;
 }
 
-    .button:hover {
+    .submitButton:hover {
         background-color: #b70563;
     }
 
-    .button:active {
+    .submitButton:active {
         background-color: #b70563;
         box-shadow: 0 5px #66767c;
         transform: translateY(4px);
     }
-
-div.polaroid {
-    width: 80%;
-    background-color: black;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: auto;
-}
-
-div.container {
-    text-align: center;
-    padding: 10px 20px;
-}
 
 form {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
