@@ -40,13 +40,22 @@ namespace Campfire.ActivitiesPage
 
             string nameControlString;
             Label control;
-            for (int i = 1; i<=8; i++)
+            Label control2;
+            int j = 0;
+            for (int i = 1; i<=16; i+=2)
             {
                 nameControlString = "Label" + i.ToString();
                 control = (Label)FindControlRecursive(Page, nameControlString);
                 if (control != null)
                 {
-                    control.Text = table.Rows[i - 1]["Name"].ToString();
+                    control.Text = table.Rows[j]["Name"].ToString();
+                }
+                nameControlString = "Label" + (i+1).ToString();
+                control2 = (Label)FindControlRecursive(Page, nameControlString);
+                if (control2 != null)
+                {
+                    control2.Text = table.Rows[j]["Description"].ToString();
+                    j++;
                 }
             }
         }
