@@ -94,7 +94,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="HomePage.aspx" />
-    <Content Include="LogIn.aspx" />
+    <Content Include="UserRegister\LogIn.aspx" />
     <Content Include="NavBar.ascx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -169,11 +169,11 @@
     <Compile Include="HomePage.aspx.designer.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="LogIn.aspx.cs">
+    <Compile Include="UserRegister\LogIn.aspx.cs">
       <DependentUpon>LogIn.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="LogIn.aspx.designer.cs">
+    <Compile Include="UserRegister\LogIn.aspx.designer.cs">
       <DependentUpon>LogIn.aspx</DependentUpon>
     </Compile>
     <Compile Include="NavBar.ascx.cs">
