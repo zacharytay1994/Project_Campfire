@@ -16,7 +16,7 @@ namespace Campfire
 
         protected void btnSignIn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/UserRegister/LogIn.aspx");
+            Response.Redirect("~/UserRegister/Login.aspx");
         }
     }
 }

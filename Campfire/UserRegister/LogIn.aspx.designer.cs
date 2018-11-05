@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Campfire {
+namespace Campfire.UserRegister {
     
     
     public partial class Login {
