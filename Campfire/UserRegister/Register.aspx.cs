@@ -13,7 +13,7 @@ namespace Campfire.UserRegister
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void btn_submit_Click(object sender, EventArgs e)
