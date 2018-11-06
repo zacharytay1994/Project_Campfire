@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Campfire.UserRegister.Login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Campfire.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Campfire.UserRegister.Login" %>
 
 <!DOCTYPE html>
 

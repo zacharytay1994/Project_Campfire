@@ -1,11 +1,35 @@
 ﻿body {
+    background-image:url("touhou.jpg");
+    /*background-repeat:no-repeat;*/
+    background-size:auto;
+    background-attachment:fixed;
+}
 
+p.registerheader {
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 60px;
 }
-p
-{
-    color:red;
+
+p.submit {
+    text-align: center;
+    padding-top: 0px;
 }
-td
-{
-    color:blue;
+
+table {
+    width:77%;
+    margin-left:23%;
+}
+
+tr {
+    border-style:none;
+    /*border-width:thin;*/
+}
+
+td {
+    color: white;
+}
+
+tablep {
+    border:solid;
 }
