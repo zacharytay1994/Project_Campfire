@@ -11,6 +11,19 @@
         </div>
     </div>
     <div class="container">
+
+        <asp:CheckBoxList ID="cbl_categories" runat="server" OnSelectedIndexChanged="cbl_categories_SelectedIndexChanged" RepeatDirection="Horizontal">
+            <asp:ListItem Value="0">All</asp:ListItem>
+            <asp:ListItem Value="1">CategoryOne</asp:ListItem>
+            <asp:ListItem Value="2">CategoryTwo</asp:ListItem>
+            <asp:ListItem Value="3">CategoryThree</asp:ListItem>
+            <asp:ListItem Value="4">CategoryFour</asp:ListItem>
+            <asp:ListItem Value="5">CategoryFive</asp:ListItem>
+        </asp:CheckBoxList>
+        Please Select Categories to Dislay<br />
+
+    </div>
+    <div class="container">
         <div class="row">
             <div class="col-md-3">
                 <table style="width:100%">            
@@ -26,6 +39,12 @@
                             <asp:Label ID="Label2" runat="server" Text="lbl_2"></asp:Label>
                         </td>
                     </tr>
+                    <tr>
+                        <td>Category:</td>
+                        <td>
+                            <asp:Label ID="Label3" runat="server" Text="lbl_3"></asp:Label>
+                        </td>
+                    </tr>
                 </table>
             </div>
             <div class="col-md-3">
@@ -33,29 +52,19 @@
                     <tr>
                         <td>Name:</td>
                         <td>
-                            <asp:Label ID="Label3" runat="server" Text="lbl_1"></asp:Label>
+                            <asp:Label ID="Label4" runat="server" Text="lbl_1"></asp:Label>
                         </td>
                     </tr>
                     <tr>
                         <td>Description:</td>
                         <td>
-                            <asp:Label ID="Label4" runat="server" Text="lbl_2"></asp:Label>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-             <div class="col-md-3">
-                <table style="width:100%">
-                    <tr>
-                        <td>Name:</td>
-                        <td>
-                            <asp:Label ID="Label5" runat="server" Text="lbl_1"></asp:Label>
+                            <asp:Label ID="Label5" runat="server" Text="lbl_2"></asp:Label>
                         </td>
                     </tr>
                     <tr>
-                        <td>Description:</td>
+                        <td>Category:</td>
                         <td>
-                            <asp:Label ID="Label6" runat="server" Text="lbl_2"></asp:Label>
+                            <asp:Label ID="Label6" runat="server" Text="lbl_3"></asp:Label>
                         </td>
                     </tr>
                 </table>
@@ -74,43 +83,39 @@
                             <asp:Label ID="Label8" runat="server" Text="lbl_2"></asp:Label>
                         </td>
                     </tr>
+                    <tr>
+                        <td>Category:</td>
+                        <td>
+                            <asp:Label ID="Label9" runat="server" Text="lbl_3"></asp:Label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+             <div class="col-md-3">
+                <table style="width:100%">
+                    <tr>
+                        <td>Name:</td>
+                        <td>
+                            <asp:Label ID="Label10" runat="server" Text="lbl_1"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Description:</td>
+                        <td>
+                            <asp:Label ID="Label11" runat="server" Text="lbl_2"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Category:</td>
+                        <td>
+                            <asp:Label ID="Label12" runat="server" Text="lbl_3"></asp:Label>
+                        </td>
+                    </tr>
                 </table>
             </div>
         </div>
         <div class="row">
             <div class="col-md-3">
-                <table style="width:100%">
-                    <tr>
-                        <td>Name:</td>
-                        <td>
-                            <asp:Label ID="Label9" runat="server" Text="lbl_1"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Description:</td>
-                        <td>
-                            <asp:Label ID="Label10" runat="server" Text="lbl_2"></asp:Label>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-             <div class="col-md-3">
-                <table style="width:100%">
-                    <tr>
-                        <td>Name:</td>
-                        <td>
-                            <asp:Label ID="Label11" runat="server" Text="lbl_1"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Description:</td>
-                        <td>
-                            <asp:Label ID="Label12" runat="server" Text="lbl_2"></asp:Label>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-             <div class="col-md-3">
                 <table style="width:100%">
                     <tr>
                         <td>Name:</td>
@@ -124,6 +129,56 @@
                             <asp:Label ID="Label14" runat="server" Text="lbl_2"></asp:Label>
                         </td>
                     </tr>
+                    <tr>
+                        <td>Category:</td>
+                        <td>
+                            <asp:Label ID="Label15" runat="server" Text="lbl_3"></asp:Label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+             <div class="col-md-3">
+                <table style="width:100%">
+                    <tr>
+                        <td>Name:</td>
+                        <td>
+                            <asp:Label ID="Label16" runat="server" Text="lbl_1"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Description:</td>
+                        <td>
+                            <asp:Label ID="Label17" runat="server" Text="lbl_2"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Category:</td>
+                        <td>
+                            <asp:Label ID="Label18" runat="server" Text="lbl_3"></asp:Label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+             <div class="col-md-3">
+                <table style="width:100%">
+                    <tr>
+                        <td>Name:</td>
+                        <td>
+                            <asp:Label ID="Label19" runat="server" Text="lbl_1"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Description:</td>
+                        <td>
+                            <asp:Label ID="Label20" runat="server" Text="lbl_2"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Category:</td>
+                        <td>
+                            <asp:Label ID="Label21" runat="server" Text="lbl_3"></asp:Label>
+                        </td>
+                    </tr>
                 </table>
             </div>
             <div class="col-md-3">
@@ -131,13 +186,19 @@
                     <tr>
                         <td>Name:</td>
                         <td>
-                            <asp:Label ID="Label15" runat="server" Text="lbl_1"></asp:Label>
+                            <asp:Label ID="Label22" runat="server" Text="lbl_1"></asp:Label>
                         </td>
                     </tr>
                     <tr>
                         <td>Description:</td>
                         <td>
-                            <asp:Label ID="Label16" runat="server" Text="lbl_2"></asp:Label>
+                            <asp:Label ID="Label23" runat="server" Text="lbl_2"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Category:</td>
+                        <td>
+                            <asp:Label ID="Label24" runat="server" Text="lbl_3"></asp:Label>
                         </td>
                     </tr>
                 </table>

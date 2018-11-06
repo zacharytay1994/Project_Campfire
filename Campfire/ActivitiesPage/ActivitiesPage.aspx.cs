@@ -14,7 +14,8 @@ namespace Campfire.ActivitiesPage
         {
             if (!Page.IsPostBack)
             {
-                Session["session_type"] = "all";
+                List<string> typesList = new List<string> { "CategoryOne", "CategoryTwo" };
+                Session["session_type"] = typesList;
                 Session["session_page"] = 0;
                 lbl_pagenumber.Text = Session["session_page"].ToString();
 
@@ -39,30 +40,53 @@ namespace Campfire.ActivitiesPage
             ActivityPage ap = new ActivityPage(_type, _page);
             DataTable table = ap.getData();
 
+            List<string> _typeList = Session["session_type"] as List<string>;
             string nameControlString;
             Label control;
-            Label control2;
+            //Label control2;
             int j = Convert.ToInt32(_page)*8;
-            for (int i = 1; i<=16; i+=2)
+            for (int i = 1; i<=24; i+=3)
             {
-                nameControlString = "Label" + i.ToString();
-                control = (Label)FindControlRecursive(Page, nameControlString);
-                if (control != null)
+                int k = 0;
+                foreach (string _typestring in _typeList)
                 {
-                    if (j < table.Rows.Count - 1)
+                    if (_typestring == table.Rows[j]["Category"].ToString())
                     {
-                        control.Text = table.Rows[j]["Name"].ToString();
+                        nameControlString = "Label" + i.ToString();
+                        control = (Label)FindControlRecursive(Page, nameControlString);
+                        if (control != null)
+                        {
+                            if (j < table.Rows.Count)
+                            {
+                                control.Text = table.Rows[j]["Name"].ToString();
+                            }
+                        }
+                        nameControlString = "Label" + (i + 1).ToString();
+                        control = (Label)FindControlRecursive(Page, nameControlString);
+                        if (control != null)
+                        {
+                            if (j < table.Rows.Count)
+                            {
+                                control.Text = table.Rows[j]["Description"].ToString();
+                            }
+                        }
+                        nameControlString = "Label" + (i + 2).ToString();
+                        control = (Label)FindControlRecursive(Page, nameControlString);
+                        if (control != null)
+                        {
+                            if (j < table.Rows.Count)
+                            {
+                                control.Text = table.Rows[j]["Category"].ToString();
+                                j++;
+                                break;
+                            }
+                        }
                     }
-                }
-                nameControlString = "Label" + (i+1).ToString();
-                control2 = (Label)FindControlRecursive(Page, nameControlString);
-                if (control2 != null)
-                {
-                    if (j < table.Rows.Count-1)
+                    k++;
+                    if (k==_typeList.Count)
                     {
-                        control2.Text = table.Rows[j]["Description"].ToString();
                         j++;
-                    }   
+                    }
                 }
             }
         }
@@ -86,6 +110,15 @@ namespace Campfire.ActivitiesPage
             Session["session_page"] = _page_number;
             lbl_pagenumber.Text = Session["session_page"].ToString();
             fillGrid(Session["session_type"], Session["session_page"]);
+        }
+
+        protected void cbl_categories_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            List<string> _typesList = cbl_categories.Items.Cast<ListItem>()
+                .Where(i => i.Selected) as List<string>;
+
+            Session["session_type"] = _typesList;
+            //string[] _typesArray = Session["session_type"] as string[];
         }
     }
 }
