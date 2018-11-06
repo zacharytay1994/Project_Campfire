@@ -14,10 +14,11 @@ namespace Campfire.ActivitiesPage
         {
             if (!Page.IsPostBack)
             {
-                string type = "all";
-                int page = 0;
+                Session["session_type"] = "all";
+                Session["session_page"] = 0;
+                lbl_pagenumber.Text = Session["session_page"].ToString();
 
-                fillGrid(type, page);
+                fillGrid(Session["session_type"], Session["session_page"]);
             }
         }
 
@@ -33,7 +34,7 @@ namespace Campfire.ActivitiesPage
             return null;
         }
 
-        public void fillGrid(string _type, int _page)
+        public void fillGrid(object _type, object _page)
         {
             ActivityPage ap = new ActivityPage(_type, _page);
             DataTable table = ap.getData();
@@ -41,23 +42,50 @@ namespace Campfire.ActivitiesPage
             string nameControlString;
             Label control;
             Label control2;
-            int j = 0;
+            int j = Convert.ToInt32(_page)*8;
             for (int i = 1; i<=16; i+=2)
             {
                 nameControlString = "Label" + i.ToString();
                 control = (Label)FindControlRecursive(Page, nameControlString);
                 if (control != null)
                 {
-                    control.Text = table.Rows[j]["Name"].ToString();
+                    if (j < table.Rows.Count - 1)
+                    {
+                        control.Text = table.Rows[j]["Name"].ToString();
+                    }
                 }
                 nameControlString = "Label" + (i+1).ToString();
                 control2 = (Label)FindControlRecursive(Page, nameControlString);
                 if (control2 != null)
                 {
-                    control2.Text = table.Rows[j]["Description"].ToString();
-                    j++;
+                    if (j < table.Rows.Count-1)
+                    {
+                        control2.Text = table.Rows[j]["Description"].ToString();
+                        j++;
+                    }   
                 }
             }
+        }
+
+        protected void btn_previous_Click(object sender, EventArgs e)
+        {
+            int _page_number = Convert.ToInt32(Session["session_page"]);
+            if (_page_number > 0)
+            {
+                _page_number--;
+                Session["session_page"] = _page_number;
+                lbl_pagenumber.Text = Session["session_page"].ToString();
+                fillGrid(Session["session_type"], Session["session_page"]);
+            }
+        }
+
+        protected void btn_next_Click(object sender, EventArgs e)
+        {
+            int _page_number = Convert.ToInt32(Session["session_page"]);
+            _page_number++;
+            Session["session_page"] = _page_number;
+            lbl_pagenumber.Text = Session["session_page"].ToString();
+            fillGrid(Session["session_type"], Session["session_page"]);
         }
     }
 }

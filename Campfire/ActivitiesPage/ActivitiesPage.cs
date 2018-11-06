@@ -10,9 +10,9 @@ namespace Campfire.ActivitiesPage
 {
     public class ActivityPage
     {
-        private string type { get; set; }
-        private int page { get; set; }
-        public ActivityPage (string _type, int _page)
+        private object type { get; set; }
+        private object page { get; set; }
+        public ActivityPage (object _type, object _page)
         {
             type = _type;
             page = _page;

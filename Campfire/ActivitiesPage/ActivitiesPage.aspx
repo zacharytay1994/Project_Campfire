@@ -144,5 +144,10 @@
             </div>
         </div>
     </div>
-    <div></div>
+    <div class="container">
+        <asp:Button ID="btn_previous" runat="server" Text="Previous" OnClick="btn_previous_Click" />
+        <asp:Button ID="btn_next" runat="server" Text="Next" OnClick="btn_next_Click" />
+    &nbsp;Page:
+        <asp:Label ID="lbl_pagenumber" runat="server" Text="Label"></asp:Label>
+    </div>
 </asp:Content>
