@@ -16,16 +16,16 @@ namespace Campfire
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            string inputEmail = txtEmail.Text;
-            string inputPw = txtPw.Text;
-            if (CheckLoginData(inputEmail, inputPw) == true)
-            {
-                Response.Redirect("HomePage.aspx");
-            }
-            else
-            {
-                lblMessage.Text = "Invalid Login ID or Password";
-            }
+            //string inputEmail = txtEmail.Text;
+            //string inputPw = txtPw.Text;
+            //if (CheckLoginData(inputEmail, inputPw) == true)
+            //{
+               // Response.Redirect("HomePage.aspx");
+            //}
+            //else
+            //{
+                //lblMessage.Text = "Invalid Login ID or Password";
+            //}
 
         }
     }
