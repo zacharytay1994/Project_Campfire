@@ -14,7 +14,7 @@ namespace Campfire.ActivitiesPage
         {
             if (!Page.IsPostBack)
             {
-                List<string> typesList = new List<string> { "4" };
+                List<string> typesList = new List<string> {  };
                 Session["session_type"] = typesList;
                 Session["session_page"] = 0;
                 lbl_pagenumber.Text = Session["session_page"].ToString();
@@ -102,10 +102,12 @@ namespace Campfire.ActivitiesPage
 
         protected void cbl_categories_SelectedIndexChanged(object sender, EventArgs e)
         {
-            List<string> _typesList = cbl_categories.Items.Cast<ListItem>()
-                .Where(i => i.Selected) as List<string>;
+            List<string> selected = new List<string>();
+            foreach (ListItem item in cbl_categories.Items)
+                if (item.Selected) selected.Add(item.Value.ToString());
 
-            Session["session_type"] = _typesList;
+            Session["session_type"] = selected;
+            fillGrid(Session["session_type"], Session["session_page"]);
             //string[] _typesArray = Session["session_type"] as string[];
         }
 
