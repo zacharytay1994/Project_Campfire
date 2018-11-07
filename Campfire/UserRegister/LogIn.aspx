@@ -1,138 +1,98 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Campfire.Master" CodeBehind="Login.aspx.cs" Inherits="Campfire.UserRegister.Login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link href="UserLogin_ss.css" rel="stylesheet" />
     <style type="text/css">
-        .auto-style1 {
-            width: 100%;
-        }
-
-        .auto-style3 {
-            width: 150px;
-            text-align: right;
-        }
 
         .auto-style4 {
-            width: 45px;
+            height: 30px;
+            width: 566px;
         }
-
         .auto-style5 {
-            width: 304px;
+            height: 30px;
+            width: 120px;
         }
-
-        .auto-style6 {
-            width: 274px;
-            text-align: center;
-            margin-left: 40px;
-        }
-
         .auto-style7 {
-            width: 690px;
+            font-family: 'Microsoft YaHei';
+            font-size: 30pt;
+            font-weight:bold;
+            color:white;
+            border-style:solid;
+            border-width:thin;
+            border-color:white;
+            padding-top:30px;
+            padding-bottom:30px;
+            padding-right:137px;
+            padding-left:137px;
         }
-
-        .auto-style8 {
-            font-size: medium;
-            color: #0000FF;
-            text-decoration: underline;
-        }
-
         .auto-style9 {
-            width: 150px;
-            text-align: right;
-            height: 31px;
+            font-family: "Segoe UI";
+            font-size: large;
         }
-
-        .auto-style10 {
-            width: 45px;
-            height: 31px;
-        }
-
         .auto-style11 {
-            width: 274px;
-            height: 31px;
+            height: 40px;
+            width: 120px;
         }
-
         .auto-style12 {
-            width: 690px;
-            height: 31px;
+            height: 40px;
+            width: 566px;
         }
-
-        .auto-style13 {
-            width: 274px;
-            height: 31px;
-            text-align: center;
+        .textbox {
+            border-radius:5px;
         }
-
-        .auto-style14 {
-            width: 150px;
-            text-align: right;
-            height: 33px;
+        .loginbutton {
+            background-color:transparent;
+            border-style:solid;
+            border-width:thin;
+            border-color:white;
+            color:white;
+            font-size:x-large;
+            padding-top:7px;
+            padding-bottom:7px;
+            padding-left:14px;
+            padding-right:14px;
         }
-
-        .auto-style15 {
-            width: 45px;
-            height: 33px;
+        .hypercss {
+            color:white;
         }
-
-        .auto-style16 {
-            width: 304px;
-            height: 33px;
-        }
-
-        .auto-style17 {
-            height: 33px;
-        }
-
-        .auto-style18 {
-            color: #CC0000;
+        .hypercss:hover {
+            color:white;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" runat="server" ContentPlaceHolderID="ContentPlaceHolder1">
-    <table class="auto-style1">
+    <p class="loginheader"><span class="auto-style7">Login</span></p>
+    <p class="loginp">
+    <table class="w-100" width="100%" border="0" style="border:none;">
         <tr>
-            <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style4">&nbsp;</td>
-            <td class="auto-style5" colspan="2">&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style14">Email:</td>
-            <td class="auto-style15"></td>
-            <td class="auto-style16" colspan="2">
-                <asp:TextBox ID="txtEmail" runat="server" Width="264px"></asp:TextBox>
+            <td class="auto-style5">
+                <asp:Label ID="lbl_Email" runat="server" CssClass="auto-style9" Text="Email :"></asp:Label>
             </td>
-            <td class="auto-style17"></td>
-        </tr>
-        <tr>
-            <td class="auto-style3">Password:</td>
-            <td class="auto-style4">&nbsp;</td>
-            <td class="auto-style5" colspan="2">
-                <asp:TextBox ID="txtPw" runat="server" Width="264px"></asp:TextBox>
+            <td class="auto-style4">
+                <asp:TextBox ID="txtEmail" runat="server" Width="380px" cssclass="textbox"></asp:TextBox>
             </td>
         </tr>
         <tr>
-            <td class="auto-style9"></td>
-            <td class="auto-style10"></td>
-            <td class="auto-style11">
-                <asp:Label ID="lblMessage" runat="server" CssClass="auto-style18"></asp:Label>
-            </td>
+            <td class="auto-style11"></td>
             <td class="auto-style12"></td>
         </tr>
         <tr>
-            <td class="auto-style9">&nbsp;</td>
-            <td class="auto-style10">&nbsp;</td>
-            <td class="auto-style13">
-                <asp:Button ID="btnLogin" runat="server" OnClick="btnLogin_Click" Text="Login" />
+            <td class="auto-style5">
+                <asp:Label ID="lbl_Password" runat="server" CssClass="auto-style9" Text="Password :"></asp:Label>
             </td>
-            <td class="auto-style12">&nbsp;</td>
+            <td class="auto-style4">
+                <asp:TextBox ID="txtPw" runat="server" Width="380px" cssclass="textbox"></asp:TextBox>
+            </td>
         </tr>
         <tr>
-            <td class="auto-style3">&nbsp;</td>
-            <td class="auto-style4">&nbsp;</td>
-            <td class="auto-style6">
-                <asp:HyperLink ID="HyperLink1" runat="server" CssClass="auto-style8" NavigateUrl="Register.aspx">Don&#39;t have an account? Sign Up here!</asp:HyperLink>
+            <td class="auto-style11">
+                &nbsp;</td>
+            <td class="auto-style12">
+                <asp:Label ID="lblMessage" runat="server" CssClass="auto-style18"></asp:Label>
             </td>
-            <td class="auto-style7">&nbsp;</td>
         </tr>
-    </table>
+        </table>
+    </p>
+    <p class="login"><asp:Button ID="btnLogin" runat="server" OnClick="btnLogin_Click" Text="Login" cssclass="loginbutton"/></p>
+    <p class="hlink"><asp:HyperLink ID="HyperLink1" runat="server" CssClass="hypercss" NavigateUrl="Register.aspx">Don&#39;t have an account? Sign Up here!</asp:HyperLink></p>
 </asp:Content>

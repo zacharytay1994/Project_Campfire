@@ -1,0 +1,28 @@
+﻿body {
+    background-image:url(test.jpg);
+    background-size:auto;
+    background-attachment:fixed;
+}
+
+p.loginheader {
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 60px;
+}
+
+table {
+    width: 77%;
+    margin-left: 23%;
+}
+
+tr {
+    border-style:none;
+}
+
+td{
+    color:white;
+}
+
+p.hlink, p.login {
+    text-align:center;
+}
