@@ -12,15 +12,13 @@
     </div>
     <div class="container">
 
-        <asp:CheckBoxList ID="cbl_categories" runat="server" OnSelectedIndexChanged="cbl_categories_SelectedIndexChanged" RepeatDirection="Horizontal">
-            <asp:ListItem Value="0">All</asp:ListItem>
+        <asp:CheckBoxList ID="cbl_categories" runat="server" OnSelectedIndexChanged="cbl_categories_SelectedIndexChanged" RepeatDirection="Horizontal" AutoPostBack="True">
             <asp:ListItem Value="1">CategoryOne</asp:ListItem>
             <asp:ListItem Value="2">CategoryTwo</asp:ListItem>
             <asp:ListItem Value="3">CategoryThree</asp:ListItem>
             <asp:ListItem Value="4">CategoryFour</asp:ListItem>
-            <asp:ListItem Value="5">CategoryFive</asp:ListItem>
         </asp:CheckBoxList>
-        Please Select Categories to Dislay<br />
+        &nbsp;Please Select Categories to Dislay<br />
 
     </div>
     <div class="container">
