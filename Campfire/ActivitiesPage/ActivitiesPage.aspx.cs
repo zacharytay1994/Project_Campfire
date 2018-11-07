@@ -14,7 +14,7 @@ namespace Campfire.ActivitiesPage
         {
             if (!Page.IsPostBack)
             {
-                List<string> typesList = new List<string> { "CategoryOne", "CategoryTwo" };
+                List<string> typesList = new List<string> { "4" };
                 Session["session_type"] = typesList;
                 Session["session_page"] = 0;
                 lbl_pagenumber.Text = Session["session_page"].ToString();
@@ -39,6 +39,7 @@ namespace Campfire.ActivitiesPage
         {
             ActivityPage ap = new ActivityPage(_type, _page);
             DataTable table = ap.getData();
+            DataTable filteredTable = ap.filterData(table, _type as List<string>);
 
             List<string> _typeList = Session["session_type"] as List<string>;
             string nameControlString;
@@ -47,47 +48,34 @@ namespace Campfire.ActivitiesPage
             int j = Convert.ToInt32(_page)*8;
             for (int i = 1; i<=24; i+=3)
             {
-                int k = 0;
-                foreach (string _typestring in _typeList)
-                {
-                    if (_typestring == table.Rows[j]["Category"].ToString())
-                    {
                         nameControlString = "Label" + i.ToString();
                         control = (Label)FindControlRecursive(Page, nameControlString);
                         if (control != null)
                         {
-                            if (j < table.Rows.Count)
+                            if (j < filteredTable.Rows.Count)
                             {
-                                control.Text = table.Rows[j]["Name"].ToString();
+                                control.Text = filteredTable.Rows[j]["Name"].ToString();
                             }
                         }
                         nameControlString = "Label" + (i + 1).ToString();
                         control = (Label)FindControlRecursive(Page, nameControlString);
                         if (control != null)
                         {
-                            if (j < table.Rows.Count)
+                            if (j < filteredTable.Rows.Count)
                             {
-                                control.Text = table.Rows[j]["Description"].ToString();
+                                control.Text = filteredTable.Rows[j]["Description"].ToString();
                             }
                         }
                         nameControlString = "Label" + (i + 2).ToString();
                         control = (Label)FindControlRecursive(Page, nameControlString);
                         if (control != null)
                         {
-                            if (j < table.Rows.Count)
+                            if (j < filteredTable.Rows.Count)
                             {
-                                control.Text = table.Rows[j]["Category"].ToString();
+                                control.Text = filteredTable.Rows[j]["Category"].ToString();
                                 j++;
-                                break;
                             }
                         }
-                    }
-                    k++;
-                    if (k==_typeList.Count)
-                    {
-                        j++;
-                    }
-                }
             }
         }
 
@@ -119,6 +107,17 @@ namespace Campfire.ActivitiesPage
 
             Session["session_type"] = _typesList;
             //string[] _typesArray = Session["session_type"] as string[];
+        }
+
+        // Converts category string to List, and returns List
+        public List<string> stringConverter(string _cat)
+        {
+            List<string> catList = new List<string> { };
+            for (int i = 0; i<_cat.Length;i++)
+            {
+                catList.Add(_cat[i].ToString());
+            }
+            return catList;
         }
     }
 }
