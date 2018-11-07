@@ -20,7 +20,7 @@
                         <label for="activityName">Name of Game</label>
                     </div>
                     <div class="col-75">
-                        <asp:TextBox ID="activityName" runat="server" placeholder="The name of the game!"></asp:TextBox>
+                        <asp:TextBox ID="activityName" runat="server" placeholder="The name of the game!" CssClass="textbox"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="rfvName" runat="server" ErrorMessage="Please Specify a Name!" ControlToValidate="activityName" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
                         <label for="briefDescription">Brief Description</label>
                     </div>
                     <div class="col-75">
-                        <asp:TextBox ID="briefDescription" runat="server" placeholder="Just a sentence is fine!"></asp:TextBox>
+                        <asp:TextBox ID="briefDescription" runat="server" placeholder="Just a sentence is fine!" CssClass="textbox"></asp:TextBox>
                         <asp:Label ID="lblDescription" runat="server" Text="Example: &quot;A game that requires you to think on your feet!&quot;" ForeColor="Orange"></asp:Label>
                         <br />
                         <asp:RequiredFieldValidator ID="rfvDescription" runat="server" ErrorMessage="Please add a Brief Description!" ControlToValidate="briefDescription" Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -40,22 +40,37 @@
                         <label for="category">Category of Game</label>
                     </div>
                     <div class="col-75">
-                        <select id="category" name="category">
-                            <option value="BoardGame">Board Game</option>
-                            <option value="Running">Running</option>
-                            <option value="For All Ages">For All Ages</option>
-                        </select><asp:RequiredFieldValidator ID="rfvCat" runat="server" ErrorMessage="Please Select at least One Category!" Display="Dynamic" ForeColor="Red" ControlToValidate="activityName"></asp:RequiredFieldValidator>
-&nbsp;<asp:CheckBoxList ID="cblCat" runat="server"></asp:CheckBoxList>
-                    </div>
+                        <asp:DropDownList ID="ddlCat" runat="server"></asp:DropDownList><asp:ListBox ID="lbCat" runat="server">
+                        <asp:ListItem Value="a">Land</asp:ListItem>
+                        <asp:ListItem Value="b">Sea</asp:ListItem>
+                        <asp:ListItem Value="3">Running</asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem></asp:ListItem>
+                        </asp:ListBox>
+                        <asp:Label ID="lblCat" runat="server" Text="Hold Ctrl + Click to Select Multiple Categories" ForeColor="Orange"></asp:Label> <br />
+                        <asp:RequiredFieldValidator ID="rfvCat" runat="server" ErrorMessage="Please Select at least One Category!" Display="Dynamic" ForeColor="Red" ControlToValidate="activityName"></asp:RequiredFieldValidator>
+&nbsp;</div>
                 </div>
                 <div class="row">
                     <div class="col-25">
                         <label for="explanation">Explanation of Game</label>
                     </div>
                     <div class="col-75">
-                        <textarea id="explanation" name="explanation" placeholder="Write your comment here.." style="height:200px"></textarea><asp:Label ID="lblExplain" runat="server" Text="Tell us about the rules and materials required!"></asp:Label>
+                        <asp:TextBox id="txtExplanation" TextMode="multiline" Columns="50" Rows="15" runat="server" CssClass="textbox" />
+                        <asp:Label ID="lblExplain" runat="server" Text="Tell us about the rules and materials required!"></asp:Label>
 &nbsp;<br />
                         <asp:RequiredFieldValidator ID="rfvExplain" runat="server" ControlToValidate="activityName" ErrorMessage="Please provide an Explanation!" ForeColor="Red"></asp:RequiredFieldValidator>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="links">Links</label>
+                    </div>
+                    <div class="col-75">
+                        <asp:TextBox ID="txtLinks" runat="server" CssClass="textbox"></asp:TextBox>
+                    <asp:Label ID="lblLinks" runat="server"></asp:Label>
                     </div>
                 </div>
                 <div class="row">
@@ -69,6 +84,7 @@
                 </div>
                 <div class="row">
                     <asp:Button ID="submitForm" runat="server" Text="Submit" OnClick="submitForm_Click" />
+                    <asp:Button ID="returnHome" runat="server" Text="Return to Main Menu" CausesValidation="False" OnClick="returnHome_Click" />
                 </div>
             </form>
         </div>

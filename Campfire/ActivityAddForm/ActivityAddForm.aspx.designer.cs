@@ -67,6 +67,33 @@ namespace Campfire {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDescription;
         
         /// <summary>
+        /// ddlCat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlCat;
+        
+        /// <summary>
+        /// lbCat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListBox lbCat;
+        
+        /// <summary>
+        /// lblCat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCat;
+        
+        /// <summary>
         /// rfvCat control.
         /// </summary>
         /// <remarks>
@@ -76,13 +103,13 @@ namespace Campfire {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCat;
         
         /// <summary>
-        /// cblCat control.
+        /// txtExplanation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList cblCat;
+        protected global::System.Web.UI.WebControls.TextBox txtExplanation;
         
         /// <summary>
         /// lblExplain control.
@@ -101,6 +128,24 @@ namespace Campfire {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvExplain;
+        
+        /// <summary>
+        /// txtLinks control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtLinks;
+        
+        /// <summary>
+        /// lblLinks control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblLinks;
         
         /// <summary>
         /// uploadPhoto control.
@@ -128,5 +173,14 @@ namespace Campfire {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button submitForm;
+        
+        /// <summary>
+        /// returnHome control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button returnHome;
     }
 }

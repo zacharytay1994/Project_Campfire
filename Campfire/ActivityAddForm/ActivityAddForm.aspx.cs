@@ -21,30 +21,35 @@ namespace Campfire
         {
             if (Page.IsValid)
             {
-                if (cblCat.SelectedIndex != 0)
+                if (ddlCat.SelectedIndex != 0)
                 {
                     // Create a new object
-                    StudentC objStudent = new StudentC();
+                    Activity objActivity = new Activity();
 
-                    objStudent.name = txtName.Text;
-                    objStudent.course = txtCourse.Text;
-                    objStudent.Email = txtEmail.Text;
-                    objStudent.mentorID = Convert.ToInt32(ddlMentor.SelectedValue.ToString());
-                    objStudent.photo = "defaultpicture.jpg";
+                    objActivity.activityName = activityName.Text;
+                    objActivity.activityDescription = briefDescription.Text;
+                    //objActivity.category = .Text;
+                    objActivity.activityExplanation = txtExplanation.Text;
+                    objActivity.link = txtLinks.Text;
+                    objActivity.activityPhoto = "defaultpicture.jpg";
 
-                    int id = objStudent.add();
+                    int id = objActivity.activityAdd();
 
                     string strValues = "";
-                    strValues += "name=" + txtName.Text;
-                    strValues += "&studentID=" + id.ToString();
-                    strValues += "&course=" + txtCourse.Text;
-                    strValues += "&eMail=" + txtEmail.Text;
-                    //strValues += "&mentorID=" + txtMentor.Text;
-                    strValues += "&mentorID=" + ddlMentor.SelectedValue.ToString();
+                    strValues += "name=" + activityName.Text;
+                    strValues += "&description=" + id.ToString();
+                    //strValues += "&category=" + ;
+                    strValues += "&explain=" + txtExplanation.Text;
+                    strValues += "&link=" + txtLinks.Text;
                     strValues += "&photo=defaultpicture.jpg";
-                    Response.Redirect("ConfirmAddStudent.aspx?" + strValues);
+                    //Response.Redirect("ConfirmAddActivity.aspx?" + strValues);
                 }
             }
+        }
+
+        protected void returnHome_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/HomePage.aspx");
         }
     }
 }
