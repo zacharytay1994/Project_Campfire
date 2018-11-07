@@ -94,7 +94,6 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="HomePage.aspx" />
-    <Content Include="UserRegister\test.jpg" />
     <Content Include="UserRegister\Login.aspx" />
     <Content Include="NavBar.ascx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -137,6 +136,7 @@
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="UserRegister\Register.aspx" />
+    <Content Include="UserRegister\test.jpg" />
     <Content Include="UserRegister\UserRegister_ss.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

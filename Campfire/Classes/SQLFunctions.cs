@@ -10,7 +10,7 @@ namespace Campfire.Classes
 {
     public class SQLFunctions : System.Web.UI.Page
     {
-        public void AddRegisterData(string _name, string _username, string _email,
+        public void AddRegisterData(string _username, string _email,
             string _password)
         {
             string strConn = ConfigurationManager.ConnectionStrings
@@ -19,10 +19,10 @@ namespace Campfire.Classes
             SqlConnection conn = new SqlConnection(strConn);
 
             SqlCommand cmd = new SqlCommand("INSERT INTO CampfireUsers " +
-                "(Name, Username, Email, Password) VALUES (@name, @username," +
+                "(Username, Email, Password) VALUES (@username," +
                 "@email, @password)", conn);
 
-            cmd.Parameters.AddWithValue("@name", _name);
+            
             cmd.Parameters.AddWithValue("@username", _username);
             cmd.Parameters.AddWithValue("@email", _email);
             cmd.Parameters.AddWithValue("@password", _password);
