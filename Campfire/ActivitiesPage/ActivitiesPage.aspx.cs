@@ -131,7 +131,39 @@ namespace Campfire.ActivitiesPage
             return catList;
         }
 
+        public int Label4Update()
+        {
+            return Convert.ToInt32(Label4.Text);
+        }
 
+        public int Label8Update()
+        {
+            return Convert.ToInt32(Label8.Text);
+        }
+        public int Label12Update()
+        {
+            return Convert.ToInt32(Label12.Text);
+        }
+        public int Label16Update()
+        {
+            return Convert.ToInt32(Label16.Text);
+        }
+        public int Label20Update()
+        {
+            return Convert.ToInt32(Label20.Text);
+        }
+        public int Label24Update()
+        {
+            return Convert.ToInt32(Label24.Text);
+        }
+        public int Label28Update()
+        {
+            return Convert.ToInt32(Label28.Text);
+        }
+        public int Label32Update()
+        {
+            return Convert.ToInt32(Label32.Text);
+        }
         //public int retrieveIDRedirect()
         //{
         //    Label control;
