@@ -14,10 +14,11 @@ namespace Campfire.ActivityDesc
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
+
             //string s = Request.QueryString["field1"];
+            Session["ActivityID"] = "";
             lbl_activityid.Text = Session["ActivityID"].ToString();
-=======
+
             int actID = Convert.ToInt32(Request.QueryString["id"]);
 
             //Display Fields
@@ -46,7 +47,7 @@ namespace Campfire.ActivityDesc
             conn.Close();
 
             //To be continued
->>>>>>> 04ca60caf83428628d8596f6f636cac840fecae7
+
         }
     }
 }
