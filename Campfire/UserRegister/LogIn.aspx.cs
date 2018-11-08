@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Configuration;
+using System.Data.SqlClient;
 
 namespace Campfire.UserRegister
 {
@@ -20,7 +22,22 @@ namespace Campfire.UserRegister
             string inputPw = txtPw.Text;
             if (CheckLoginData(inputEmail, inputPw) == true)
             {
-                Response.Redirect("HomePage.aspx");
+                string strConn = ConfigurationManager.ConnectionStrings
+                    ["CampfireConnectionString"].ToString();
+
+                SqlConnection conn = new SqlConnection(strConn);
+
+                SqlCommand cmd = new SqlCommand("SELECT Username FROM CampfireUsers WHERE EmailAddr=@email AND Password=@password", conn);
+                cmd.Parameters.AddWithValue("@password", inputPw);
+                cmd.Parameters.AddWithValue("@email", inputEmail);
+                conn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    Session["UserAuthentication"] = dr["Username"].ToString();
+                    conn.Close();
+                    Response.Redirect("HomePage.aspx");
+                }
             }
             else
             {
