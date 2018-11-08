@@ -14,7 +14,24 @@
     <div id="wrapper">
         <div id="header">
             <div class="scrollUp">
-                <input type="submit" class="scrollButton" title="Top"/>
+                <input type="submit" class="scrollButton" title="Top" value="Top"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="rightcontainer">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>Categories</h2>
+                <div class="buttonCat">
+                    <input type="submit" id="btn1" value="Action" />
+                </div>
+                <div class="buttonCat">
+                    <input type="submit" id="btn2" value="Adventure" />
+                </div>
+                <div class="buttonCat">
+                    <input type="submit" id="btn3" value="Rhythm" />
+                </div>
             </div>
         </div>
     </div>
@@ -59,13 +76,6 @@
                             <p>Lorem Ipsum Lorem Ipsum</p>
                             <h3>Featured Game 2</h3>
                         </td>
-                        <td>
-                            <p>&nbsp;</p>
-                            <!--2-->
-                            <img src="image2.jpg" width="150" height="150" class="photo" />
-                            <p>Lorem Ipsum Lorem Ipsum</p>
-                            <h3>Featured Game 2</h3>
-                        </td>
                     </tr>
                     <tr>
                         <td>
@@ -103,13 +113,6 @@
                             <p>Lorem Ipsum Lorem Ipsum</p>
                             <h3>Featured Game 2</h3>
                         </td>
-                        <td>
-                            <p>&nbsp;</p>
-                            <!--2-->
-                            <img src="image2.jpg" width="150" height="150" class="photo" />
-                            <p>Lorem Ipsum Lorem Ipsum</p>
-                            <h3>Featured Game 2</h3>
-                        </td>
                     </tr>
                     <tr>
                         <td>
@@ -118,13 +121,6 @@
                             <img src="image1.jpg" width="150" height="150" class="photo" />
                             <p>Lorem Ipsum Lorem Ipsum</p>
                             <h3>Featured Game 1</h3>
-                        </td>
-                        <td>
-                            <p>&nbsp;</p>
-                            <!--2-->
-                            <img src="image2.jpg" width="150" height="150" class="photo" />
-                            <p>Lorem Ipsum Lorem Ipsum</p>
-                            <h3>Featured Game 2</h3>
                         </td>
                         <td>
                             <p>&nbsp;</p>
