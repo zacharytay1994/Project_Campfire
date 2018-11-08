@@ -69,7 +69,8 @@
                     </div>
                     <div class="col-75">
                         <asp:TextBox ID="txtLinks" runat="server" CssClass="textbox"></asp:TextBox>
-                    <asp:Label ID="lblLinks" runat="server"></asp:Label>
+                    <asp:Label ID="lblLinks" runat="server"></asp:Label><br />
+                        <asp:RegularExpressionValidator ID="revLinks" runat="server" ErrorMessage="Please use a Valid URL!" ValidationExpression="http(s)?://([\w-]+\.)+[\w-]+(/[\w- ./?%&amp;=]*)?" ControlToValidate="txtLinks" Display="Dynamic" ForeColor="Red"></asp:RegularExpressionValidator>
                     </div>
                 </div>
                 <div class="row">
@@ -77,7 +78,7 @@
                         <label for="uploadPhoto">Upload Photos</label>
                     </div>
                     <div class="col-75">
-                        <asp:FileUpload ID="uploadPhoto" runat="server" />
+                        <asp:FileUpload ID="upPhoto" runat="server" />
                     </div>
                     <asp:Label ID="lblPhoto" runat="server"></asp:Label>
                 </div>

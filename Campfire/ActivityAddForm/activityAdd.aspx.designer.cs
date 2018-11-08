@@ -139,13 +139,22 @@ namespace Campfire {
         protected global::System.Web.UI.WebControls.Label lblLinks;
         
         /// <summary>
-        /// uploadPhoto control.
+        /// revLinks control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload uploadPhoto;
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator revLinks;
+        
+        /// <summary>
+        /// upPhoto control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload upPhoto;
         
         /// <summary>
         /// lblPhoto control.

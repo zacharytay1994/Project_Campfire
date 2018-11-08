@@ -8,6 +8,7 @@ using Campfire.App_Code;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace Campfire
 {
@@ -28,11 +29,47 @@ namespace Campfire
                 objActivity.activityName = activityName.Text;
                 objActivity.activityDescription = briefDescription.Text;
 
-                objActivity.category = lbCat.SelectedValue;
-
-                //objActivity.category = .Text;
+                string categ = "";
+                
+                foreach (var x in lbCat.SelectedValue)
+                {
+                    categ += x;                    
+                }
+                objActivity.category = categ;
                 objActivity.activityExplanation = txtExplanation.Text;
                 objActivity.link = txtLinks.Text;
+                string uploadedFile = "";
+                if (upPhoto.HasFile == true)
+                {
+                    string savePath;
+
+                    //Find the filename extension of the file to be uploaded
+                    string fileExt = Path.GetExtension(upPhoto.FileName);
+
+                    uploadedFile = activityName.Text + fileExt;
+
+                    //MapPath - to find the complete path to the images folder in server
+                    savePath = MapPath("~/imgages/gamePhotos/" + uploadedFile);
+
+                    try
+                    {
+                        upPhoto.SaveAs(savePath); //Upload the file to server
+                        objActivity.activityPhoto = uploadedFile;
+                    }
+                    catch (IOException)
+                    {
+                        //File IO error, could be due to access rights denied
+                        lblPhoto.Text = "File uploading fail!";
+                    }
+                    catch (Exception ex) //Other types of errors
+                    {
+                        lblPhoto.Text = ex.Message;
+                    }
+                }
+                else
+                {
+                    lblPhoto.Text = "Please select a file!";
+                }
                 objActivity.activityPhoto = "defaultpicture.jpg";
 
                 int id = objActivity.activityAdd();
