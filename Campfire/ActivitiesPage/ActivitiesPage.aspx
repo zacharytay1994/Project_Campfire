@@ -18,12 +18,12 @@
             <asp:ListItem Value="c">CategoryThree</asp:ListItem>
             <asp:ListItem Value="d">CategoryFour</asp:ListItem>
         </asp:CheckBoxList>
-        &nbsp;Please Select Categories to Dislay<br />
+        &nbsp;Please Select Categories to Display<br />
 
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            <div onclick="redirect(this.id)" class="col-md-3" id="1">
                 <table style="width:100%">            
                     <tr>
                         <td>Name:</td>
@@ -45,7 +45,7 @@
                     </tr>
                 </table>
             </div>
-            <div class="col-md-3">
+            <div onclick="redirect(this.id)" class="col-md-3" id="2">
                 <table style="width:100%">
                     <tr>
                         <td>Name:</td>
@@ -67,7 +67,7 @@
                     </tr>
                 </table>
             </div>
-             <div class="col-md-3">
+             <div onclick="redirect(3)" class="col-md-3">
                 <table style="width:100%">
                     <tr>
                         <td>Name:</td>
@@ -89,7 +89,7 @@
                     </tr>
                 </table>
             </div>
-             <div class="col-md-3">
+             <div onclick="redirect(4)" class="col-md-3">
                 <table style="width:100%">
                     <tr>
                         <td>Name:</td>
@@ -113,7 +113,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-3">
+            <div onclick="redirect(5)" class="col-md-3">
                 <table style="width:100%">
                     <tr>
                         <td>Name:</td>
@@ -135,7 +135,7 @@
                     </tr>
                 </table>
             </div>
-             <div class="col-md-3">
+             <div onclick="redirect(6)" class="col-md-3">
                 <table style="width:100%">
                     <tr>
                         <td>Name:</td>
@@ -157,7 +157,7 @@
                     </tr>
                 </table>
             </div>
-             <div class="col-md-3">
+             <div onclick="redirect(7)" class="col-md-3">
                 <table style="width:100%">
                     <tr>
                         <td>Name:</td>
@@ -179,7 +179,7 @@
                     </tr>
                 </table>
             </div>
-            <div class="col-md-3">
+            <div onclick="redirect(8)" class="col-md-3">
                 <table style="width:100%">
                     <tr>
                         <td>Name:</td>
@@ -208,5 +208,17 @@
         <asp:Button ID="btn_next" runat="server" Text="Next" OnClick="btn_next_Click" />
     &nbsp;Page:
         <asp:Label ID="lbl_pagenumber" runat="server" Text="Label"></asp:Label>
+        <br />
+        <asp:Label ID="lblID" runat="server"></asp:Label>
+        <br />
     </div>
+    
+   
+    <script type="text/javascript">
+        function redirect(divID) {
+            
+            var actID = <%= retrieveID() %>; //Call .cs function
+            window.location = '../ActivityDesc/ActivityDesc.aspx' + actID; return false; //Redirect
+        }
+    </script>
 </asp:Content>

@@ -121,5 +121,12 @@ namespace Campfire.ActivitiesPage
             }
             return catList;
         }
+
+
+        public int retrieveID()
+        {
+            
+            return 1; //Pass value back to .aspx
+        }
     }
 }
