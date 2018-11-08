@@ -44,6 +44,8 @@
         <tr>
             <td class="text-left" colspan="2">
                 <asp:Label ID="lblExp" runat="server"></asp:Label>
+                Activity ID =
+                <asp:Label ID="lbl_activityid" runat="server" Text="ActivityId"></asp:Label>
             </td>
         </tr>
         <tr>

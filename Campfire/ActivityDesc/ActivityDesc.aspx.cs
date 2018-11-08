@@ -11,7 +11,8 @@ namespace Campfire.ActivityDesc
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //string s = Request.QueryString["field1"];
+            lbl_activityid.Text = Session["ActivityID"].ToString();
         }
     }
 }

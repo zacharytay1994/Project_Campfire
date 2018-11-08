@@ -3,6 +3,18 @@
     <link rel="stylesheet" href="ActivitiesPage_ss.css" type="text/css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+   <%-- <asp:HiddenField runat="server" ID="SendA" Value="1" />
+    <script>
+       document.getElementById("<%=SendA.ClientID%>").Value = "3";
+    </script>
+    <script type="text/javascript">
+        function redirect(item) {
+            document.getElementById("<%=SendA.ClientID%>").Value = "3";
+            var actID = <%= retrieveIDRedirect() %>; //Call .cs function
+            window.location = '../ActivityDesc/ActivityDesc.aspx' + '?field1=' + actID;
+            return false; //Redirect
+        }
+    </script>--%>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -23,7 +35,7 @@
     </div>
     <div class="container">
         <div class="row">
-            <div onclick="redirect(this.id)" class="col-md-3" id="1">
+            <div onclick="redirect(this.id)" class="col-md-3" id="4">
                 <table style="width:100%">            
                     <tr>
                         <td>Name:</td>
@@ -43,77 +55,74 @@
                             <asp:Label ID="Label3" runat="server" Text="lbl_3"></asp:Label>
                         </td>
                     </tr>
+                    <tr>
+                        <td>ID:</td>
+                        <td>
+                            <asp:Label ID="Label4" runat="server" Text="lbl_3"></asp:Label>
+                        </td>
+                    </tr>
                 </table>
+                <asp:Button runat="server" width="100%" ID="Button0" OnClick="Button0_Click" Text="Let's GO!" />
             </div>
-            <div onclick="redirect(this.id)" class="col-md-3" id="2">
+            <div onclick="redirect(this)" class="col-md-3" id="8">
                 <table style="width:100%">
                     <tr>
                         <td>Name:</td>
                         <td>
-                            <asp:Label ID="Label4" runat="server" Text="lbl_1"></asp:Label>
+                            <asp:Label ID="Label5" runat="server" Text="lbl_1"></asp:Label>
                         </td>
                     </tr>
                     <tr>
                         <td>Description:</td>
                         <td>
-                            <asp:Label ID="Label5" runat="server" Text="lbl_2"></asp:Label>
+                            <asp:Label ID="Label6" runat="server" Text="lbl_2"></asp:Label>
                         </td>
                     </tr>
                     <tr>
                         <td>Category:</td>
                         <td>
-                            <asp:Label ID="Label6" runat="server" Text="lbl_3"></asp:Label>
+                            <asp:Label ID="Label7" runat="server" Text="lbl_3"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ID:</td>
+                        <td>
+                            <asp:Label ID="Label8" runat="server" Text="lbl_3"></asp:Label>
                         </td>
                     </tr>
                 </table>
+                <asp:Button runat="server" width="100%" ID="Button1" onclick="Button1_Click" Text="Let's GO!" />
             </div>
-             <div onclick="redirect(3)" class="col-md-3">
+             <div onclick="redirect(this)" class="col-md-3" id="12">
                 <table style="width:100%">
                     <tr>
                         <td>Name:</td>
                         <td>
-                            <asp:Label ID="Label7" runat="server" Text="lbl_1"></asp:Label>
+                            <asp:Label ID="Label9" runat="server" Text="lbl_1"></asp:Label>
                         </td>
                     </tr>
                     <tr>
                         <td>Description:</td>
                         <td>
-                            <asp:Label ID="Label8" runat="server" Text="lbl_2"></asp:Label>
+                            <asp:Label ID="Label10" runat="server" Text="lbl_2"></asp:Label>
                         </td>
                     </tr>
                     <tr>
                         <td>Category:</td>
                         <td>
-                            <asp:Label ID="Label9" runat="server" Text="lbl_3"></asp:Label>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-             <div onclick="redirect(4)" class="col-md-3">
-                <table style="width:100%">
-                    <tr>
-                        <td>Name:</td>
-                        <td>
-                            <asp:Label ID="Label10" runat="server" Text="lbl_1"></asp:Label>
+                            <asp:Label ID="Label11" runat="server" Text="lbl_3"></asp:Label>
                         </td>
                     </tr>
                     <tr>
-                        <td>Description:</td>
-                        <td>
-                            <asp:Label ID="Label11" runat="server" Text="lbl_2"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Category:</td>
+                        <td>ID:</td>
                         <td>
                             <asp:Label ID="Label12" runat="server" Text="lbl_3"></asp:Label>
                         </td>
                     </tr>
                 </table>
+                 <asp:Button runat="server" width="100%" ID="Button2" onclick="Button2_Click" Text="Let's GO!" />
             </div>
-        </div>
-        <div class="row">
-            <div onclick="redirect(5)" class="col-md-3">
+             <div onclick="redirect(this)" class="col-md-3" id="16">
                 <table style="width:100%">
                     <tr>
                         <td>Name:</td>
@@ -133,73 +142,132 @@
                             <asp:Label ID="Label15" runat="server" Text="lbl_3"></asp:Label>
                         </td>
                     </tr>
+                    <tr>
+                        <td>ID:</td>
+                        <td>
+                            <asp:Label ID="Label16" runat="server" Text="lbl_3"></asp:Label>
+                        </td>
+                    </tr>
                 </table>
+                 <asp:Button runat="server" width="100%" ID="Button3" onclick="Button3_Click" Text="Let's GO!" />
             </div>
-             <div onclick="redirect(6)" class="col-md-3">
+        </div>
+        <div class="row">
+            <div onclick="redirect(this)" class="col-md-3" id="20">
                 <table style="width:100%">
                     <tr>
                         <td>Name:</td>
                         <td>
-                            <asp:Label ID="Label16" runat="server" Text="lbl_1"></asp:Label>
+                            <asp:Label ID="Label17" runat="server" Text="lbl_1"></asp:Label>
                         </td>
                     </tr>
                     <tr>
                         <td>Description:</td>
                         <td>
-                            <asp:Label ID="Label17" runat="server" Text="lbl_2"></asp:Label>
+                            <asp:Label ID="Label18" runat="server" Text="lbl_2"></asp:Label>
                         </td>
                     </tr>
                     <tr>
                         <td>Category:</td>
                         <td>
-                            <asp:Label ID="Label18" runat="server" Text="lbl_3"></asp:Label>
+                            <asp:Label ID="Label19" runat="server" Text="lbl_3"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ID:</td>
+                        <td>
+                            <asp:Label ID="Label20" runat="server" Text="lbl_3"></asp:Label>
                         </td>
                     </tr>
                 </table>
+                <asp:Button runat="server" width="100%" ID="Button4" onclick="Button4_Click" Text="Let's GO!" />
             </div>
-             <div onclick="redirect(7)" class="col-md-3">
+             <div onclick="redirect(this)" class="col-md-3" id="24">
                 <table style="width:100%">
                     <tr>
                         <td>Name:</td>
                         <td>
-                            <asp:Label ID="Label19" runat="server" Text="lbl_1"></asp:Label>
+                            <asp:Label ID="Label21" runat="server" Text="lbl_1"></asp:Label>
                         </td>
                     </tr>
                     <tr>
                         <td>Description:</td>
                         <td>
-                            <asp:Label ID="Label20" runat="server" Text="lbl_2"></asp:Label>
+                            <asp:Label ID="Label22" runat="server" Text="lbl_2"></asp:Label>
                         </td>
                     </tr>
                     <tr>
                         <td>Category:</td>
                         <td>
-                            <asp:Label ID="Label21" runat="server" Text="lbl_3"></asp:Label>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <div onclick="redirect(8)" class="col-md-3">
-                <table style="width:100%">
-                    <tr>
-                        <td>Name:</td>
-                        <td>
-                            <asp:Label ID="Label22" runat="server" Text="lbl_1"></asp:Label>
+                            <asp:Label ID="Label23" runat="server" Text="lbl_3"></asp:Label>
                         </td>
                     </tr>
                     <tr>
-                        <td>Description:</td>
-                        <td>
-                            <asp:Label ID="Label23" runat="server" Text="lbl_2"></asp:Label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Category:</td>
+                        <td>ID:</td>
                         <td>
                             <asp:Label ID="Label24" runat="server" Text="lbl_3"></asp:Label>
                         </td>
                     </tr>
                 </table>
+                 <asp:Button runat="server" width="100%" ID="Button5" onclick="Button5_Click" Text="Let's GO!" />
+            </div>
+             <div onclick="redirect(this.ID)" class="col-md-3" ID="28">
+                <table style="width:100%">
+                    <tr>
+                        <td>Name:</td>
+                        <td>
+                            <asp:Label ID="Label25" runat="server" Text="lbl_1"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Description:</td>
+                        <td>
+                            <asp:Label ID="Label26" runat="server" Text="lbl_2"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Category:</td>
+                        <td>
+                            <asp:Label ID="Label27" runat="server" Text="lbl_3"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ID:</td>
+                        <td>
+                            <asp:Label ID="Label28" runat="server" Text="lbl_3"></asp:Label>
+                        </td>
+                    </tr>
+                </table>
+                 <asp:Button runat="server" width="100%" ID="Button6" onclick="Button6_Click" Text="Let's GO!" />
+            </div>
+            <div onclick="redirect(this.id)" class="col-md-3">
+                <table style="width:100%">
+                    <tr>
+                        <td>Name:</td>
+                        <td>
+                            <asp:Label ID="Label29" runat="server" Text="lbl_1"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Description:</td>
+                        <td>
+                            <asp:Label ID="Label30" runat="server" Text="lbl_2"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Category:</td>
+                        <td>
+                            <asp:Label ID="Label31" runat="server" Text="lbl_3"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ID:</td>
+                        <td>
+                            <asp:Label ID="Label32" runat="server" Text="lbl_3"></asp:Label>
+                        </td>
+                    </tr>
+                </table>
+                <asp:Button runat="server" width="100%" ID="Button7" onclick="Button7_Click" text="Let's GO!"/>
             </div>
         </div>
     </div>
@@ -214,11 +282,5 @@
     </div>
     
    
-    <script type="text/javascript">
-        function redirect(divID) {
-            
-            var actID = <%= retrieveID() %>; //Call .cs function
-            window.location = '../ActivityDesc/ActivityDesc.aspx' + actID; return false; //Redirect
-        }
-    </script>
+    
 </asp:Content>

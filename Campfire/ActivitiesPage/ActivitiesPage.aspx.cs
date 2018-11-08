@@ -46,7 +46,7 @@ namespace Campfire.ActivitiesPage
             Label control;
             //Label control2;
             int j = Convert.ToInt32(_page)*8;
-            for (int i = 1; i<=24; i+=3)
+            for (int i = 1; i<=32; i+=4)
             {
                         nameControlString = "Label" + i.ToString();
                         control = (Label)FindControlRecursive(Page, nameControlString);
@@ -73,6 +73,15 @@ namespace Campfire.ActivitiesPage
                             if (j < filteredTable.Rows.Count)
                             {
                                 control.Text = filteredTable.Rows[j]["Category"].ToString();
+                            }
+                        }
+                        nameControlString = "Label" + (i + 3).ToString();
+                        control = (Label)FindControlRecursive(Page, nameControlString);
+                        if (control != null)
+                        {
+                            if (j < filteredTable.Rows.Count)
+                            {
+                                control.Text = filteredTable.Rows[j]["ID"].ToString();
                                 j++;
                             }
                         }
@@ -123,10 +132,72 @@ namespace Campfire.ActivitiesPage
         }
 
 
-        public int retrieveID()
+        //public int retrieveIDRedirect()
+        //{
+        //    Label control;
+        //    int activityID;
+        //    Session["lblID"] = "";
+        //    string lblid = Session["lblID"].ToString();
+        //    int x = Convert.ToInt32(SendA.Value);
+        //    control = (Label)FindControlRecursive(Page, lblid);
+        //    if (control != null)
+        //    {
+        //        activityID = Convert.ToInt32(control.Text);
+        //        return x;
+        //    }
+        //    else
+        //    {
+        //        return x;
+        //    }
+        //    //Pass value back to .aspx
+        //}
+
+        protected void Button7_Click(object sender, EventArgs e)
         {
-            
-            return 1; //Pass value back to .aspx
+            Session["ActivityID"] = Label32.Text;
+            Response.Redirect("../ActivityDesc/ActivityDesc.aspx");
+        }
+
+        protected void Button6_Click(object sender, EventArgs e)
+        {
+            Session["ActivityID"] = Label28.Text;
+            Response.Redirect("../ActivityDesc/ActivityDesc.aspx");
+        }
+
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            Session["ActivityID"] = Label24.Text;
+            Response.Redirect("../ActivityDesc/ActivityDesc.aspx");
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            Session["ActivityID"] = Label20.Text;
+            Response.Redirect("../ActivityDesc/ActivityDesc.aspx");
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Session["ActivityID"] = Label16.Text;
+            Response.Redirect("../ActivityDesc/ActivityDesc.aspx");
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Session["ActivityID"] = Label12.Text;
+            Response.Redirect("../ActivityDesc/ActivityDesc.aspx");
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Session["ActivityID"] = Label8.Text;
+            Response.Redirect("../ActivityDesc/ActivityDesc.aspx");
+        }
+
+        protected void Button0_Click(object sender, EventArgs e)
+        {
+            Session["ActivityID"] = Label4.Text;
+            Response.Redirect("../ActivityDesc/ActivityDesc.aspx");
         }
     }
 }
