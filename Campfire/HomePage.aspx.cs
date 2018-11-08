@@ -11,10 +11,7 @@ namespace Campfire
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["UserAuthentication"] == null)
-            {
-                Response.Redirect("~/UserRegister/Login.aspx");
-            }
+            
         }
     }
 }

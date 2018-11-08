@@ -36,7 +36,7 @@ namespace Campfire.UserRegister
                 {
                     Session["UserAuthentication"] = dr["Username"].ToString();
                     conn.Close();
-                    Response.Redirect("HomePage.aspx");
+                    Response.Redirect("~/HomePage.aspx");
                 }
             }
             else
