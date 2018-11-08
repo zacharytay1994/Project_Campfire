@@ -24,13 +24,13 @@
             <div class="col-sm-12">
                 <h2>Categories</h2>
                 <div class="buttonCat">
-                    <input type="submit" id="btn1" value="Action" />
+                    <input type="submit" class="btn1" value="Action" />
                 </div>
                 <div class="buttonCat">
-                    <input type="submit" id="btn2" value="Adventure" />
+                    <input type="submit" class="btn2" value="Adventure" />
                 </div>
                 <div class="buttonCat">
-                    <input type="submit" id="btn3" value="Rhythm" />
+                    <input type="submit" class="btn3" value="Rhythm" />
                 </div>
             </div>
         </div>
