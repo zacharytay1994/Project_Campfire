@@ -1,0 +1,15 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Campfire.Master" AutoEventWireup="true" CodeBehind="CalenderPlanningNested.master.cs" Inherits="Campfire.CalenderPlanner.CalenderPlanningNested" %>
+<%@ Register Src="../CalenderPlanner/VerticalNavbar.ascx" TagPrefix="uc1" TagName="Navbar" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+   <uc1:Navbar runat="server" id="Navbar" /> 
+</asp:Content>

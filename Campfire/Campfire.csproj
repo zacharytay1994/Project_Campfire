@@ -85,6 +85,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CalenderPlanner\CalenderPlanningHome.aspx" />
+    <Content Include="CalenderPlanner\VerticalNavbar.ascx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -117,6 +119,7 @@
     <Content Include="Scripts\esm\popper.js.map" />
     <Content Include="Scripts\esm\popper-utils.min.js.map" />
     <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="CalenderPlanner\CalenderPlanningNested.master" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -133,6 +136,27 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalenderPlanner\CalenderPlanningHome.aspx.cs">
+      <DependentUpon>CalenderPlanningHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CalenderPlanner\CalenderPlanningHome.aspx.designer.cs">
+      <DependentUpon>CalenderPlanningHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CalenderPlanner\CalenderPlanningNested.master.cs">
+      <DependentUpon>CalenderPlanningNested.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CalenderPlanner\CalenderPlanningNested.master.designer.cs">
+      <DependentUpon>CalenderPlanningNested.master</DependentUpon>
+    </Compile>
+    <Compile Include="CalenderPlanner\VerticalNavbar.ascx.cs">
+      <DependentUpon>VerticalNavbar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CalenderPlanner\VerticalNavbar.ascx.designer.cs">
+      <DependentUpon>VerticalNavbar.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Campfire.Master.cs">
       <DependentUpon>Campfire.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
