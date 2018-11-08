@@ -1,65 +1,36 @@
 ﻿body {
     font-family: Georgia,sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: normal;
     text-align: center;
     margin: 0;
-    margin-bottom: 17px;
-}
-
-/*Button*/
-#button {
-    text-align: center;
-}
-
-#btnEnter {
-    position: relative;
-    width: 200px;
-    height: 60px;
-    top: 50%;
-    background-color: #3e87ec;
-    border: 0;
-    margin: 25% auto;
-    padding: .6875rem 2rem;
-    cursor: pointer;
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    border-radius: .25rem;
+    /*margin-bottom: 17px;*/
 }
 
 /*Frame 3*/
 /*Review boxes*/
-#review-container {
+.middlecontainer {
     display: flex;
     flex-wrap: nowrap;
-    padding-left: 500px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
-    #review-container > div {
+    .container > div {
         background-color: lightgoldenrodyellow;
         margin: 10px;
         text-align: center;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 30px;
-        width: 200px;
-        padding: 5px;
+        width: 100%;
+        padding: 10px;
     }
 
-.testtitle {
-    font-size: 18px;
-    font-weight: bold;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-decoration: underline;
+.scrollUp {
+    text-align:right;
 }
 
-
-#scrollbutton {
-    text-align: right;
-}
-
-#scrollBtn {
-    display: none;
+.scrollButton {
     position: fixed;
     bottom: 20px;
     right: 30px;
@@ -73,6 +44,6 @@
     border-radius: 10px;
 }
 
-    #scrollBtn:hover {
-        background-color: #555;
+    .scrollButton:hover {
+        background-color:#555;
     }
