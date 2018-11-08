@@ -1,5 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ActivityAddForm.aspx.cs" Inherits="Campfire.test" %>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="activityAdd.aspx.cs" Inherits="Campfire.activityAdd" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -40,17 +39,17 @@
                         <label for="category">Category of Game</label>
                     </div>
                     <div class="col-75">
-                        <asp:DropDownList ID="ddlCat" runat="server"></asp:DropDownList><asp:ListBox ID="lbCat" runat="server">
+                        <asp:ListBox ID="lbCat" runat="server" SelectionMode="Multiple">
                         <asp:ListItem Value="a">Land</asp:ListItem>
                         <asp:ListItem Value="b">Sea</asp:ListItem>
-                        <asp:ListItem Value="3">Running</asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
-                        <asp:ListItem></asp:ListItem>
+                        <asp:ListItem Value="c">Running</asp:ListItem>
+                        <asp:ListItem Value="d">Board</asp:ListItem>
+                        <asp:ListItem Value="e">Tiring</asp:ListItem>
+                        <asp:ListItem Value="f">Bonding</asp:ListItem>
+                        <asp:ListItem Value="g">Action</asp:ListItem>
                         </asp:ListBox>
                         <asp:Label ID="lblCat" runat="server" Text="Hold Ctrl + Click to Select Multiple Categories" ForeColor="Orange"></asp:Label> <br />
-                        <asp:RequiredFieldValidator ID="rfvCat" runat="server" ErrorMessage="Please Select at least One Category!" Display="Dynamic" ForeColor="Red" ControlToValidate="activityName"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvCat" runat="server" ErrorMessage="Please Select at least One Category!" Display="Dynamic" ForeColor="Red" ControlToValidate="lbCat"></asp:RequiredFieldValidator>
 &nbsp;</div>
                 </div>
                 <div class="row">
@@ -91,3 +90,4 @@
     </main>
 </body>
 </html>
+

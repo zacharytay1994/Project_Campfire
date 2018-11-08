@@ -5,8 +5,9 @@ using System.Web;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using Campfire.App_Code;
 
-namespace Campfire
+namespace Campfire.App_Code
 {
     public class Activity
     {
@@ -31,7 +32,7 @@ namespace Campfire
             //and the connection object for connecting to the database.
             SqlCommand cmd = new SqlCommand
                              ("INSERT INTO Activities (ActivityName, ActivityDesc, Category, ActivityExp, Link)" +
-                             "OUTPUT INSERTED.ActivityID" +
+                             "OUTPUT INSERTED.ActivityID " +
                              "VALUES (@name, @desc, @cat, @expla, @link)", conn);
 
             //Define the parameters used in SQL statement, value for each parameter
