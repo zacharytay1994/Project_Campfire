@@ -18,8 +18,7 @@
     <table class="w-100">
         <tr>
             <td class="auto-style1" rowspan="4">
-                <asp:Image ID="Image1" runat="server" />
-            </td>
+                Slideshow Thingy Here</td>
             <td>
                 <asp:Label ID="lblTitle" runat="server"></asp:Label>
             </td>
@@ -39,7 +38,9 @@
         </tr>
         <tr>
             <td class="auto-style1">Votes Displayed Here</td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:Label ID="lblCategories" runat="server"></asp:Label>
+            </td>
         </tr>
         <tr>
             <td class="text-left" colspan="2">
