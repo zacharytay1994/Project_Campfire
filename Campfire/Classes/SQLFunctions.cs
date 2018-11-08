@@ -19,7 +19,7 @@ namespace Campfire.Classes
             SqlConnection conn = new SqlConnection(strConn);
 
             SqlCommand cmd = new SqlCommand("INSERT INTO CampfireUsers " +
-                "(Username, Email, Password) VALUES (@username," +
+                "(Username, EmailAddr, Password) VALUES (@username," +
                 "@email, @password)", conn);
 
             
