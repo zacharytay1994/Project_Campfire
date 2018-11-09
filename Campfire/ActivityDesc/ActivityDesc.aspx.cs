@@ -48,7 +48,7 @@ namespace Campfire.ActivityDesc
 
             //foreach (DataRow row in result.Tables["Category"].Rows)
             //{
-            //    lblCategories.Text += result.Tables[0].Rows[0]["Name"].ToString() + ", ";
+            //    lblCategories.Text += result.Tables[0].Rows[0]["CategoryName"].ToString() + ", ";
             //}
 
         }
