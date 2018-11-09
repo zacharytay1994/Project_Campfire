@@ -15,29 +15,29 @@ namespace Campfire.ActivityDesc
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            string s = Request.QueryString["field1"];
-            Session["ActivityID"] = "";
-            lbl_activityid.Text = s; //Session["ActivityID"].ToString();
+            //string s = Request.QueryString["field1"];
+            //Session["ActivityID"] = "";
+            //lbl_activityid.Text = s; //Session["ActivityID"].ToString();
 
-            int actID = Convert.ToInt32(Request.QueryString["id"]);
+            int actID = Convert.ToInt32(Request.QueryString["actID"]);
 
             //Display Fields
-            //string strConn = ConfigurationManager.ConnectionStrings["CampfireConnectionString"].ToString();
-            //SqlConnection conn = new SqlConnection(strConn);
-            //SqlCommand cmd = new SqlCommand("SELECT * FROM Activities WHERE ActivityID = @actid", conn);
-            //cmd.Parameters.AddWithValue("@actid", actID);
-            //SqlDataAdapter daActivity = new SqlDataAdapter(cmd);
-            //DataSet result = new DataSet();
-            //conn.Open();
-            //daActivity.Fill(result, "Activities");
-            //conn.Close();
-            
-            //lblTitle.Text = result.Tables[0].Rows[0]["ActivityName"].ToString();
-            //lblDesc.Text = result.Tables[0].Rows[0]["ActivityDesc"].ToString();
-            //lblExp.Text = result.Tables[0].Rows[0]["ActivityDesc"].ToString();
-            //lblLinks.Text = result.Tables[0].Rows[0]["Link"].ToString();
+            string strConn = ConfigurationManager.ConnectionStrings["CampfireConnectionString"].ToString();
+            SqlConnection conn = new SqlConnection(strConn);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Activities WHERE ActivityID = @actid", conn);
+            cmd.Parameters.AddWithValue("@actid", actID);
+            SqlDataAdapter daActivity = new SqlDataAdapter(cmd);
+            DataSet result = new DataSet();
+            conn.Open();
+            daActivity.Fill(result, "Activities");
+            conn.Close();
 
-            ////Display Categories
+            lblTitle.Text = result.Tables[0].Rows[0]["ActivityName"].ToString();
+            lblDesc.Text = result.Tables[0].Rows[0]["ActivityDesc"].ToString();
+            lblExp.Text = result.Tables[0].Rows[0]["ActivityDesc"].ToString();
+            lblLinks.Text = result.Tables[0].Rows[0]["Link"].ToString();
+
+            //Display Categories
             //cmd = new SqlCommand("SELECT * FROM Category INNER JOIN Activities ON Category.ActivityID = Activities.ActivityID WHERE Activities.ActivityID = @actid", conn);
             //cmd.Parameters.AddWithValue("@actid", actID);
             //SqlDataAdapter daCategory = new SqlDataAdapter(cmd);
@@ -46,7 +46,10 @@ namespace Campfire.ActivityDesc
             //daCategory.Fill(result, "Category");
             //conn.Close();
 
-            //To be continued
+            //foreach (DataRow row in result.Tables["Category"].Rows)
+            //{
+            //    lblCategories.Text += result.Tables[0].Rows[0]["Name"].ToString() + ", ";
+            //}
 
         }
     }

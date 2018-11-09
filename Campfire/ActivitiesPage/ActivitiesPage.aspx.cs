@@ -183,7 +183,7 @@ namespace Campfire.ActivitiesPage
         //    }
         //    //Pass value back to .aspx
         //}
-
+        /*
         protected void Button7_Click(object sender, EventArgs e)
         {
             Session["ActivityID"] = Label32.Text;
@@ -230,6 +230,6 @@ namespace Campfire.ActivitiesPage
         {
             Session["ActivityID"] = Label4.Text;
             Response.Redirect("../ActivityDesc/ActivityDesc.aspx");
-        }
+        }*/
     }
 }

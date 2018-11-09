@@ -38,7 +38,7 @@
             }
             //var parse =<%= Label4Update()%>;
              //Call .cs function
-            window.location = '../ActivityDesc/ActivityDesc.aspx' + '?field1=' + parse;
+            window.location = '../ActivityDesc/ActivityDesc.aspx' + '?actID=' + parse;
             return false; //Redirect
         }
     </script>
@@ -85,11 +85,11 @@
                     <tr>
                         <td>ID:</td>
                         <td>
-                            <asp:Label ID="Label4" runat="server" Text="0"></asp:Label>
+                            <asp:Label ID="Label4" runat="server" Text="1"></asp:Label>
                         </td>
                     </tr>
                 </table>
-                <asp:Button runat="server" width="100%" ID="Button0" OnClick="Button0_Click" Text="Let's GO!" />
+                <%--<asp:Button runat="server" width="100%" ID="Button0" OnClick="Button0_Click" Text="Let's GO!" />--%>
             </div>
             <div onclick="redirect(this.id)" class="col-md-3" id="8">
                 <table style="width:100%">
@@ -114,11 +114,11 @@
                     <tr>
                         <td>ID:</td>
                         <td>
-                            <asp:Label ID="Label8" runat="server" Text="0"></asp:Label>
+                            <asp:Label ID="Label8" runat="server" Text="2"></asp:Label>
                         </td>
                     </tr>
                 </table>
-                <asp:Button runat="server" width="100%" ID="Button1" onclick="Button1_Click" Text="Let's GO!" />
+                <%--<asp:Button runat="server" width="100%" ID="Button1" onclick="Button1_Click" Text="Let's GO!" />--%>
             </div>
              <div onclick="redirect(this.id)" class="col-md-3" id="12">
                 <table style="width:100%">
@@ -143,11 +143,11 @@
                     <tr>
                         <td>ID:</td>
                         <td>
-                            <asp:Label ID="Label12" runat="server" Text="0"></asp:Label>
+                            <asp:Label ID="Label12" runat="server" Text="3"></asp:Label>
                         </td>
                     </tr>
                 </table>
-                 <asp:Button runat="server" width="100%" ID="Button2" onclick="Button2_Click" Text="Let's GO!" />
+                 <%--<asp:Button runat="server" width="100%" ID="Button2" onclick="Button2_Click" Text="Let's GO!" />--%>
             </div>
              <div onclick="redirect(this.id)" class="col-md-3" id="16">
                 <table style="width:100%">
@@ -172,11 +172,11 @@
                     <tr>
                         <td>ID:</td>
                         <td>
-                            <asp:Label ID="Label16" runat="server" Text="0"></asp:Label>
+                            <asp:Label ID="Label16" runat="server" Text="4"></asp:Label>
                         </td>
                     </tr>
                 </table>
-                 <asp:Button runat="server" width="100%" ID="Button3" onclick="Button3_Click" Text="Let's GO!" />
+                 <%--<asp:Button runat="server" width="100%" ID="Button3" onclick="Button3_Click" Text="Let's GO!" />--%>
             </div>
         </div>
         <div class="row">
@@ -203,11 +203,11 @@
                     <tr>
                         <td>ID:</td>
                         <td>
-                            <asp:Label ID="Label20" runat="server" Text="0"></asp:Label>
+                            <asp:Label ID="Label20" runat="server" Text="5"></asp:Label>
                         </td>
                     </tr>
                 </table>
-                <asp:Button runat="server" width="100%" ID="Button4" onclick="Button4_Click" Text="Let's GO!" />
+                <%--<asp:Button runat="server" width="100%" ID="Button4" onclick="Button4_Click" Text="Let's GO!" />--%>
             </div>
              <div onclick="redirect(this.id)" class="col-md-3" id="24">
                 <table style="width:100%">
@@ -232,11 +232,11 @@
                     <tr>
                         <td>ID:</td>
                         <td>
-                            <asp:Label ID="Label24" runat="server" Text="0"></asp:Label>
+                            <asp:Label ID="Label24" runat="server" Text="6"></asp:Label>
                         </td>
                     </tr>
                 </table>
-                 <asp:Button runat="server" width="100%" ID="Button5" onclick="Button5_Click" Text="Let's GO!" />
+                <%-- <asp:Button runat="server" width="100%" ID="Button5" onclick="Button5_Click" Text="Let's GO!" />--%>
             </div>
              <div onclick="redirect(this.id)" class="col-md-3" ID="28">
                 <table style="width:100%">
@@ -261,11 +261,11 @@
                     <tr>
                         <td>ID:</td>
                         <td>
-                            <asp:Label ID="Label28" runat="server" Text="0"></asp:Label>
+                            <asp:Label ID="Label28" runat="server" Text="7"></asp:Label>
                         </td>
                     </tr>
                 </table>
-                 <asp:Button runat="server" width="100%" ID="Button6" onclick="Button6_Click" Text="Let's GO!" />
+                <%-- <asp:Button runat="server" width="100%" ID="Button6" onclick="Button6_Click" Text="Let's GO!" />--%>
             </div>
             <div onclick="redirect(this.id)" class="col-md-3">
                 <table style="width:100%">
@@ -290,11 +290,11 @@
                     <tr>
                         <td>ID:</td>
                         <td>
-                            <asp:Label ID="Label32" runat="server" Text="0"></asp:Label>
+                            <asp:Label ID="Label32" runat="server" Text="8"></asp:Label>
                         </td>
                     </tr>
                 </table>
-                <asp:Button runat="server" width="100%" ID="Button7" onclick="Button7_Click" text="Let's GO!"/>
+                <%--<asp:Button runat="server" width="100%" ID="Button7" onclick="Button7_Click" text="Let's GO!"/>--%>
             </div>
         </div>
     </div>
