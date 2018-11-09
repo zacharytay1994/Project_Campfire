@@ -46,11 +46,7 @@ namespace Campfire.ActivityDesc
             //daCategory.Fill(result, "Category");
             //conn.Close();
 
-            //foreach (DataRow row in result.Tables["Category"].Rows)
-            //{
-            //    lblCategories.Text += result.Tables[0].Rows[0]["CategoryName"].ToString() + ", ";
-            //}
-
+            //lblCategories.Text += result.Tables[0].Rows[0]["CategoryName"].ToString();
         }
     }
 }
