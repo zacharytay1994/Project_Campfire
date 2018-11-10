@@ -18,15 +18,15 @@ namespace Campfire.UserRegister
 
         protected void btn_submit_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(rfv_name.IsValid) + Convert.ToInt32(rfv_username.IsValid) + Convert.ToInt32(rfv_email.IsValid)
+            if (Convert.ToInt32(rfv_username.IsValid) + Convert.ToInt32(rfv_email.IsValid)
                 + Convert.ToInt32(rfv_password.IsValid) + Convert.ToInt32(rfv_password2.IsValid) + Convert.ToInt32(cv_password2.IsValid) == 6)
             {
-                string _name = txt_Name.Value;
+                
                 string _username = tb_username.Text.ToString();
                 string _email = email_Email.Value;
                 string _password = tb_password2.Text.ToString();
 
-                AddRegisterData(_name, _username, _email, _password);
+                AddRegisterData(_username, _email, _password);
             }
         }
     }
