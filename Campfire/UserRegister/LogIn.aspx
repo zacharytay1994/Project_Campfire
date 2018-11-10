@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-﻿<%@ Page Language="C#" MasterPageFile="~/Campfire.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Campfire.UserRegister.Login" %>
-=======
-﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Campfire.Master" CodeBehind="Login.aspx.cs" Inherits="Campfire.UserRegister.Login" %>
->>>>>>> b998eed3aa10b0f21f3e803667b0a53557b2bc63
+<%@ Page Language="C#" MasterPageFile="~/Campfire.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Campfire.UserRegister.Login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="UserLogin_ss.css" rel="stylesheet" />
