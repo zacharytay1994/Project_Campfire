@@ -13,12 +13,12 @@ namespace Campfire.CalenderPlanner {
     public partial class CalenderPlanningNested {
         
         /// <summary>
-        /// Navbar control.
+        /// ContentPlaceHolder3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Campfire.CalenderPlanner.VerticalNavbar Navbar;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder3;
     }
 }

@@ -1,15 +1,29 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/Campfire.Master" AutoEventWireup="true" CodeBehind="CalenderPlanningNested.master.cs" Inherits="Campfire.CalenderPlanner.CalenderPlanningNested" %>
-<%@ Register Src="../CalenderPlanner/VerticalNavbar.ascx" TagPrefix="uc1" TagName="Navbar" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style>
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-    </style>
+    <link href="CalenderPlanner.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-   <uc1:Navbar runat="server" id="Navbar" /> 
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server"> 
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#" style="display:block">MyEvents</a>
+      <a href="#" style="display:block">ManageGroups</a>
+      <a href="#" style="display:block">CreateNewGroup</a>
+    </div>
+
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+             document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+    <div class="col-md-12">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server"></asp:ContentPlaceHolder>
+    </div>
 </asp:Content>

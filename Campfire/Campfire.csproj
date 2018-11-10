@@ -85,8 +85,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CalenderPlanner\CalenderPlanner.css" />
     <Content Include="CalenderPlanner\CalenderPlanningHome.aspx" />
-    <Content Include="CalenderPlanner\VerticalNavbar.ascx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -149,13 +149,6 @@
     </Compile>
     <Compile Include="CalenderPlanner\CalenderPlanningNested.master.designer.cs">
       <DependentUpon>CalenderPlanningNested.master</DependentUpon>
-    </Compile>
-    <Compile Include="CalenderPlanner\VerticalNavbar.ascx.cs">
-      <DependentUpon>VerticalNavbar.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CalenderPlanner\VerticalNavbar.ascx.designer.cs">
-      <DependentUpon>VerticalNavbar.ascx</DependentUpon>
     </Compile>
     <Compile Include="Campfire.Master.cs">
       <DependentUpon>Campfire.Master</DependentUpon>
