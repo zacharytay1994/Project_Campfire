@@ -4,4 +4,7 @@
     <asp:GridView ID="GridView1" runat="server">
     </asp:GridView>
 
+    User ID:
+    <asp:Label ID="lbl_userid" runat="server" Text="Label"></asp:Label>
+
 </asp:Content>
