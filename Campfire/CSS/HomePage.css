@@ -59,6 +59,7 @@ body {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 * {
     box-sizing: border-box
 }
@@ -66,6 +67,8 @@ body {
 .mySlides1, .mySlides2 {
     display: none
 =======
+=======
+>>>>>>> parent of 3f76c43... PROGRESS I
 =======
 >>>>>>> parent of 3f76c43... PROGRESS I
 /*-----SlideShow-----*/
@@ -102,8 +105,12 @@ img {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 /* Position the "next button" to the right */
+=======
+/*position next button to right*/
+>>>>>>> parent of 3f76c43... PROGRESS I
 =======
 /*position next button to right*/
 >>>>>>> parent of 3f76c43... PROGRESS I
@@ -119,8 +126,12 @@ img {
     .prev:hover, .next:hover {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         background-color: #f1f1f1;
         color: black;
+=======
+        background-color:rgba(0,0,0,0.8);
+>>>>>>> parent of 3f76c43... PROGRESS I
 =======
         background-color:rgba(0,0,0,0.8);
 >>>>>>> parent of 3f76c43... PROGRESS I
