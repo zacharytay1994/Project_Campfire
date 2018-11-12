@@ -1,7 +1,4 @@
-﻿* {
-    box-sizing: border-box;
-}
-
+﻿
 body {
     font-family: Verdana,sans-serif;
     margin:0 auto;
@@ -56,21 +53,26 @@ body {
     }
 
 
-/*-----SlideShow-----*/
+* {
+    box-sizing: border-box
+}
+
 .mySlides1, .mySlides2 {
-    display: none;
+    display: none
 }
 
 img {
-    vertical-align:middle;
+    vertical-align: middle;
 }
 
+/* Slideshow container */
 .slideshow-container {
-    max-width: 1080px;
+    max-width: 1000px;
     position: relative;
     margin: auto;
 }
-/*Prev&Next Buttons*/
+
+/* Next & previous buttons */
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -82,20 +84,20 @@ img {
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
-    user-select:none;
-}
-/*position next button to right*/
-.prev {
-    left: 0;
     border-radius: 0 3px 3px 0;
+    user-select: none;
 }
+
+/* Position the "next button" to the right */
 .next {
-    right:0;
-    border-radius:3px 0 0 3px;
+    right: 0;
+    border-radius: 3px 0 0 3px;
 }
+
+    /* On hover, add a grey background color */
     .prev:hover, .next:hover {
-        background-color:#f1f1f1;
-        color:white;
+        background-color: #f1f1f1;
+        color: black;
     }
 /*Caption text*/
 .text {

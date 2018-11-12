@@ -34,72 +34,28 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="body2" runat="server">
     <div id="main">
         <!---Scripts--->
+       
+       
         <script>
-          //Single slideshow
-            var slideIndex = 1;
-            showSlides(slideIndex);
-
-            function plusSlides(n) {
-              showSlides(slideIndex += n);
-            }
-
-            function currentSlide(n) {
-              showSlides(slideIndex = n);
-            }
-
-            function showSlides(n) {
-              var i;
-              var slides = document.getElementsByClassName("mySlides1");
-              var dots = document.getElementsByClassName("dot");
-                if (n > slides.length) { slideIndex = 1; }    
-                if (n < 1) { slideIndex = slides.length; }
-              for (i = 0; i < slides.length; i++) {
-                  slides[i].style.display = "none";  
-              }
-              for (i = 0; i < dots.length; i++) {
-                  dots[i].className = dots[i].className.replace(" active", "");
-              }
-              slides[slideIndex-1].style.display = "block";  
-              dots[slideIndex-1].className += " active";
-            }
-            
-            //Multiple slideshows
-            /*var slideIndex = [1,1];
-            var slideId = ["mySlides1", "mySlides2"];
+            var slideIndex = [1,1];
+            var slideId = ["mySlides1", "mySlides2"]
             showSlides(1, 0);
             showSlides(1, 1);
 
             function plusSlides(n, no) {
-              showSlides(slideIndex[no] += n, no);
+                showSlides(slideIndex[no] += n, no);
             }
-            
+
             function showSlides(n, no) {
-              var i;
-              var x = document.getElementsByClassName(slideId[no]);
-              if (n > x.length) {slideIndex[no] = 1}    
-              if (n < 1) {slideIndex[no] = x.length}
-              for (i = 0; i < x.length; i++) {
-                 x[i].style.display = "none";  
-              }
-              x[slideIndex[no]-1].style.display = "block";  
-            }*/
-            
-            //Automatic scrolling
-
-            /*var slideIndex = 0;
-            showSlides();
-
-            function showSlides() {
                 var i;
-                var slides = document.getElementsByClassName("mySlides");
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
+                var x = document.getElementsByClassName(slideId[no]);
+                if (n > x.length) {slideIndex[no] = 1}    
+                if (n < 1) {slideIndex[no] = x.length}
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
                 }
-                slideIndex++;
-                if (slideIndex > slides.length) {slideIndex = 1}
-                slides[slideIndex-1].style.display = "block";
-                setTimeout(showSlides, 2000); // Change image every 2 seconds
-            }*/ 
+                x[slideIndex[no]-1].style.display = "block";  
+            }
         </script>
         
         <script> 
@@ -146,32 +102,43 @@
                     <br />
 
                     <!--Featured Schedules-->
-                    <div class="slideshow-container">
-                        <div class="mySlides2">
-                            <div class="numText">1 / 3</div>
-                            <img src="images/image3.jpg" style="width:100%"/>
-                            <div class="text">Caption Text</div>
-                        </div>
-                        <div class="mySlides2">
-                            <div class="numText">2 / 3</div>
-                            <img src="images/image1.jpg" style="width:100%"/>
-                            <div class="text">Caption Text</div>
-                        </div>
-                        <div class="mySlides2">
-                            <div class="numText">3 / 3</div>
-                            <img src="images/image2.jpg" style="width:100%"/>
-                            <div class="text">Caption Text</div>
-                        </div>
-                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                    </div>
-                    <div style="text-align:center">
-                        <span class="dot" onclick="currentSlide(1)"></span> 
-                        <span class="dot" onclick="currentSlide(2)"></span> 
-                        <span class="dot" onclick="currentSlide(3)"></span> 
-                    </div>
-                    <br />
-                </div>
+                    <h2 style="text-align:center">Multiple Slideshows</h2>
+
+<p>Slideshow 1:</p>
+<div class="slideshow-container">
+  <div class="mySlides1">
+    <img src="image/image1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides1">
+    <img src="image/image2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides1">
+    <img src="image/image13.jpg" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+</div>
+
+<p>Slideshow 2:</p>
+<div class="slideshow-container">
+  <div class="mySlides2">
+    <img src="img_band_chicago.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides2">
+    <img src="img_band_la.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides2">
+    <img src="img_band_ny.jpg" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+</div>
 
                 <!--Other Games-->
                 <div class="othergames">
