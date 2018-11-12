@@ -1,21 +1,23 @@
 ﻿
 body {
     font-family: Verdana,sans-serif;
-    margin:0 auto;
+    margin:0;
     font-size: 16px;
 }
 
-#main {
-    background-color: lightgreen;
+.main {
+
 }
 
-.schedulelist {
+.leftcontainer {
     float: left;
-    width: 10%;
+    width: 200px;
     height: 100%;
+    padding-right: 50px;
 }
 
-    .schedulelist > div {
+    .leftcontainer > div {
+        background-color: sandybrown;
         text-align: center;
         font-size: 14px;
         padding: 10px;
@@ -23,28 +25,30 @@ body {
         margin-top: 10px;
     }
 
-.featured {
-    width:80%;
+.middlecontainer {
+    max-width:1080px;
     position:relative;
     margin:auto;  
 }
 
-    .featured > div {
+    .middlecontainer > div {
+        background-color: lightgoldenrodyellow;
+        margin: 10px;
         text-align: center;
         font-size: 14px;
         line-height: 30px;
+        width: 80%;
+        padding: 10px;
     }
 
-.othergames {
-    text-align: center;
-}
-
-.categories {
+.rightcontainer {
     float:right;
-    width:10%;
-    height:100%;
+    width:200px;
+    height:100%; 
+    padding-right:50px;
 }
-    .categories > div {
+    .rightcontainer > div {
+        background-color: sandybrown;
         text-align:center;
         font-size:14px;
         padding:10px;
@@ -53,12 +57,18 @@ body {
     }
 
 
+<<<<<<< HEAD
 * {
     box-sizing: border-box
 }
 
 .mySlides1, .mySlides2 {
     display: none
+=======
+/*-----SlideShow-----*/
+.mySlides {
+    display: none;
+>>>>>>> parent of 3f76c43... PROGRESS I
 }
 
 img {
@@ -87,8 +97,12 @@ img {
     border-radius: 0 3px 3px 0;
     user-select: none;
 }
+<<<<<<< HEAD
 
 /* Position the "next button" to the right */
+=======
+/*position next button to right*/
+>>>>>>> parent of 3f76c43... PROGRESS I
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
@@ -96,8 +110,12 @@ img {
 
     /* On hover, add a grey background color */
     .prev:hover, .next:hover {
+<<<<<<< HEAD
         background-color: #f1f1f1;
         color: black;
+=======
+        background-color:rgba(0,0,0,0.8);
+>>>>>>> parent of 3f76c43... PROGRESS I
     }
 /*Caption text*/
 .text {
@@ -158,6 +176,21 @@ img {
 
     .active, .dot:hover {
         background-color: #717171;
+    }
+
+
+/*-----Category Buttons-----*/
+.buttonCat {
+    border: none;
+    outline: none;
+    background-color: #101;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+}
+    .buttonCat:hover {
+        background-color:#555;
     }
 
 /*-----Scroll Button-----*/
