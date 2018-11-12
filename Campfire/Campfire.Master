@@ -22,8 +22,14 @@
         <uc1:Navbar runat="server" id="Navbar" /> 
         <div class="container" style="margin:auto;">   
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-2">
                     <asp:ContentPlaceHolder ID="body" runat="server"></asp:ContentPlaceHolder>
+                </div>
+                <div class="col-sm-8">
+                    <asp:ContentPlaceHolder ID="body2" runat="server"></asp:ContentPlaceHolder>
+                </div>
+                <div class="col-sm-2">
+                    <asp:ContentPlaceHolder ID="body3" runat="server"></asp:ContentPlaceHolder>
                 </div>
             </div>
         </div>
