@@ -8,6 +8,7 @@
     <div class="main">
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <asp:Content ID="Content3" ContentPlaceHolderID="body2" runat="server">
     <div id="main">
         <!---Scripts--->
@@ -33,6 +34,8 @@
                 }
                 x[slideIndex[no]-1].style.display = "block";  
 =======
+=======
+>>>>>>> parent of 3f76c43... PROGRESS I
         <script> //for slideshow
             var slideIndex = 1;
             showSlides(slideIndex);
@@ -110,6 +113,7 @@
                         <div class="numText">1 / 3</div>
                         <img src="images/image1.jpg" style="width:100%"/>"
                         <div class="text">Caption Text</div>
+<<<<<<< HEAD
                     </div>
                     <div class="mySlides fade">
                         <div class="numText">2 / 3</div>
@@ -121,6 +125,19 @@
                         <img src="images/image3.jpg" style="width:100%"/>"
                         <div class="text">Caption Text</div>
                     </div>
+=======
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numText">2 / 3</div>
+                        <img src="images/image2.jpg" style="width:100%"/>"
+                        <div class="text">Caption Text</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numText">3 / 3</div>
+                        <img src="images/image3.jpg" style="width:100%"/>"
+                        <div class="text">Caption Text</div>
+                    </div>
+>>>>>>> parent of 3f76c43... PROGRESS I
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                     <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 </div>
@@ -130,6 +147,7 @@
               <span class="dot" onclick="currentSlide(3)"></span> 
             </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <!--Featured Schedules-->
                     <h2 style="text-align:center">Multiple Slideshows</h2>
@@ -170,12 +188,15 @@
   <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
 </div>
 =======
+=======
+>>>>>>> parent of 3f76c43... PROGRESS I
             <!--Featured Schedules--->
             <div class="slideshow-container">
                     <div class="mySlides fade">
                         <div class="numText">1 / 3</div>
                         <img src="images/image1.jpg" style="width:100%"/>"
                         <div class="text">Caption Text</div>
+<<<<<<< HEAD
                     </div>
                     <div class="mySlides fade">
                         <div class="numText">2 / 3</div>
@@ -187,6 +208,19 @@
                         <img src="images/image3.jpg" style="width:100%"/>"
                         <div class="text">Caption Text</div>
                     </div>
+=======
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numText">2 / 3</div>
+                        <img src="images/image2.jpg" style="width:100%"/>"
+                        <div class="text">Caption Text</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numText">3 / 3</div>
+                        <img src="images/image3.jpg" style="width:100%"/>"
+                        <div class="text">Caption Text</div>
+                    </div>
+>>>>>>> parent of 3f76c43... PROGRESS I
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                     <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 </div>
@@ -195,6 +229,9 @@
               <span class="dot" onclick="currentSlide(2)"></span> 
               <span class="dot" onclick="currentSlide(3)"></span> 
             </div>
+<<<<<<< HEAD
+>>>>>>> parent of 3f76c43... PROGRESS I
+=======
 >>>>>>> parent of 3f76c43... PROGRESS I
 
             <!--Other Games--->
