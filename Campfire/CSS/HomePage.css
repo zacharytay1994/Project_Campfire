@@ -9,12 +9,11 @@ body {
 }
 
 #main {
-    background-color: lightgreen;
+    //background-color: lightgreen;
 }
 
 .schedulelist {
     float: left;
-    width: 10%;
     height: 100%;
 }
 
@@ -27,7 +26,7 @@ body {
     }
 
 .featured {
-    width: 80%;
+    width: 100%;
     position: relative;
     margin: auto;
 }
@@ -38,13 +37,17 @@ body {
         line-height: 30px;
     }
 
+.slist, .str, .sth {
+    border: 1px solid black;
+}
+
 .othergames {
     text-align: center;
 }
 
 .categories {
     float: right;
-    width: 10%;
+    width: 10px;
     height: 100%;
 }
 
@@ -56,6 +59,9 @@ body {
         margin-top: 10px;
     }
 
+.clist {
+    border: 1px solid black;
+}
 
 /*-----SlideShow-----*/
 .mySlides1, .mySlides2 {

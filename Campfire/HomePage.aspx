@@ -9,20 +9,21 @@
     <div class="row">
         <div class="col-sm-2"> 
             <div class="schedulelist">
-                <table style="border-collapse: collapse; width:100%;">
-                    <tr style="font-style:oblique;">
-                    <th>Schedules</th>
+                <table class="slist" style="border-collapse: collapse; width:100%;">
+                    <tr class="str" style="font-style:oblique;">
+                    <th class ="sth">Schedules</th>
+                        <th></th>
                     </tr>
-                    <tr>
-                        <th><input type="button" value="Schedule1" /></th>
+                    <tr class="str">
+                        <th class ="sth"><input type="button" value="Schedule1" /></th>
                         <th><input type="button" value="Delete"/></th>
                     </tr>
-                    <tr>
-                        <th><input type="button" value="Schedule2" /></th>
+                    <tr class="str">
+                        <th class ="sth"><input type="button" value="Schedule2" /></th>
                         <th><input type="button" value="Delete"/></th>
                     </tr>
-                    <tr>
-                        <th><input type="button" value="Schedule3" /></th>
+                    <tr class="str">
+                        <th class ="sth"><input type="button" value="Schedule3" /></th>
                         <th><input type="button" value="Delete"/></th>
                     </tr>
                 </table>
@@ -103,14 +104,14 @@
             });
         </script>
         <div class="row">
-            <div class="col-sm-8">
+            <div class="col-sm-12">
                 <div class="scrollUp">
                     <input type="submit" class="scrollButton" value="Top" />
                 </div>
 
                 <div class="featured">
                     <!--Featured Activities-->
-                    <div class="slideshow-container">
+                    <div class="slideshow-container" style="text-align:center;">
                         <div class="mySlides1">
                             <div class="numText">1 / 3</div>
                             <img src="images/image1.jpg" style="width:100%"/>
@@ -140,7 +141,7 @@
                     <br />
 
                     <!--Featured Schedules-->
-                    <div class="slideshow-container">
+                    <div class="slideshow-container" style="text-align:center;">
                         <div class="mySlides2">
                             <div class="numText">1 / 3</div>
                             <img src="images/image3.jpg" style="width:100%"/>
@@ -187,23 +188,6 @@
                                     <p>Lorem Ipsum Lorem Ipsum</p>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>
-                                    <p>&nbsp;</p>
-                                    <img src="image.jpg" width="150" height="150" class="photo" />
-                                    <p>Lorem Ipsum Lorem Ipsum</p>
-                                </td>
-                                <td>
-                                    <p>&nbsp;</p>
-                                    <img src="image.jpg" width="150" height="150" class="photo" />
-                                    <p>Lorem Ipsum Lorem Ipsum</p>
-                                </td>
-                                <td>
-                                    <p>&nbsp;</p>
-                                    <img src="image.jpg" width="150" height="150" class="photo" />
-                                    <p>Lorem Ipsum Lorem Ipsum</p>
-                                </td>
-                            </tr>
                         </table>
 
                         <table>
@@ -224,43 +208,9 @@
                                     <p>Lorem Ipsum Lorem Ipsum</p>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>
-                                    <p>&nbsp;</p>
-                                    <img src="image.jpg" width="150" height="150" class="photo" />
-                                    <p>Lorem Ipsum Lorem Ipsum</p>
-                                </td>
-                                <td>
-                                    <p>&nbsp;</p>
-                                    <img src="image.jpg" width="150" height="150" class="photo" />
-                                    <p>Lorem Ipsum Lorem Ipsum</p>
-                                </td>
-                                <td>
-                                    <p>&nbsp;</p>
-                                    <img src="image.jpg" width="150" height="150" class="photo" />
-                                    <p>Lorem Ipsum Lorem Ipsum</p>
-                                </td>
-                            </tr>
                         </table>
 
                         <table>
-                            <tr>
-                                <td>
-                                    <p>&nbsp;</p>
-                                    <img src="image.jpg" width="150" height="150" class="photo" />
-                                    <p>Lorem Ipsum Lorem Ipsum</p>
-                                </td>
-                                <td>
-                                    <p>&nbsp;</p>
-                                    <img src="image.jpg" width="150" height="150" class="photo" />
-                                    <p>Lorem Ipsum Lorem Ipsum</p>
-                                </td>
-                                <td>
-                                    <p>&nbsp;</p>
-                                    <img src="image.jpg" width="150" height="150" class="photo" />
-                                    <p>Lorem Ipsum Lorem Ipsum</p>
-                                </td>
-                            </tr>
                             <tr>
                                 <td>
                                     <p>&nbsp;</p>
@@ -294,7 +244,7 @@
     <div class="row">
         <div class="col-sm-2">
             <div class="categories">
-                <table class="buttonCat">
+                <table class="clist">
                     <tr>
                         <th>Categories</th>
                     </tr>
